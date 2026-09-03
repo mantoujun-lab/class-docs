@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "25计算机1",
+  title: "25计算机1知识库",
   description: "班级文档",
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
@@ -12,6 +12,7 @@ export default defineConfig({
     logo: 'favicon.png',
     nav: [
       { text: '主页', link: '/' },
+      { text: '文档', link: '/7s' },
       { text: '实例', link: '/markdown-examples' }
     ],
 
@@ -21,6 +22,12 @@ export default defineConfig({
         items: [
           { text: '实例', link: '/markdown-examples' },
           { text: 'API 参考', link: '/api-examples' }
+        ]
+      },
+      {
+        text: '文档',
+        items: [
+          { text: '学生宿舍7S管理标准', link: '/7s' }
         ]
       },
       {
