@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始浏览
-      link: /markdown-examples
+      link: /7s
     - theme: alt
       text: 班级网站
       link: https://hjx-25pc1.xyz
@@ -23,26 +23,21 @@ hero:
       target: _blank
 
 features:
-  - icon: 📚
-    title: 课程资料
-    details: 汇总各学科的课件、笔记与重点知识,方便同学们随时查阅复习。
-    link: /markdown-examples
-    linkText: 查看更多
   - icon: 🏠
     title: 宿舍 7S 管理
     details: 学生宿舍 7S 管理标准与实施细则,营造整洁有序的生活环境。
     link: /7s
     linkText: 阅读规范
-  - icon: 💻
-    title: 代码片段
-    details: 收集常用代码模板、API 参考与开发工具使用技巧,助力高效编码。
-    link: /api-examples
-    linkText: 查看示例
-  - icon: ✍️
+  - icon: 📝
     title: 写作指南
     details: Markdown 语法、文档排版与协作流程的入门指引,人人可参与贡献。
     link: /markdown-examples
     linkText: 了解详情
+  - icon: 📖
+    title: API 参考
+    details: VitePress 提供的 API 参考与默认主题配置示例。
+    link: /api-examples
+    linkText: 查看示例
   - icon: 🌟
     title: 赞赏支持
     details: 如果本站对你有帮助,欢迎通过赞赏支持我们持续维护与更新。

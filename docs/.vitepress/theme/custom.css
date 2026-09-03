@@ -6,20 +6,22 @@
   --vp-c-brand-3: #60a5fa;
   --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
 
-  /* 橙色（次颜色） */
+  /* 橙色（次颜色）。accent-3 / accent-soft 是配套色阶,
+     供自定义组件(链接 hover、徽章、提示气泡等)按需引用 */
   --vp-c-accent-1: #ea580c;
   --vp-c-accent-2: #f97316;
   --vp-c-accent-3: #fb923c;
   --vp-c-accent-soft: rgba(234, 88, 12, 0.14);
 
-  /* 按钮（行动按钮）相关 */
+  /* 按钮(行动按钮)。配色始终保持"按下更深"的视觉反馈:
+     默认常驻最深色,hover 略变浅(高亮),active 用 color-mix 再压暗 */
   --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+  --vp-button-brand-active-bg: color-mix(in srgb, var(--vp-c-brand-1), black 18%);
   --vp-button-brand-text: #ffffff;
   --vp-button-alt-bg: var(--vp-c-accent-1);
   --vp-button-alt-hover-bg: var(--vp-c-accent-2);
-  --vp-button-alt-active-bg: var(--vp-c-accent-1);
+  --vp-button-alt-active-bg: color-mix(in srgb, var(--vp-c-accent-1), black 18%);
   --vp-button-alt-text: #ffffff;
 
   /* 首页 hero 渐变：蓝 -> 橙 */

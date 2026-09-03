@@ -12,6 +12,7 @@ export default defineConfig({
     logo: 'favicon.png',
     nav: [
       { text: '主页', link: '/' },
+      { text: '文档', link: '/7s' },
       { text: '实例', link: '/markdown-examples' }
     ],
 
