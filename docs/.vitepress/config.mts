@@ -89,22 +89,37 @@ export default defineConfig({
     logo: 'favicon.png',
     nav: [
       { text: '主页', link: '/' },
-      { text: '文档', link: '/7s' },
-      { text: '实例', link: '/markdown-examples' }
+      { text: '课程', link: '/course' },
+      { text: '指南', link: '/guide' },
+      { text: '工具', link: '/tools' },
+      { text: '资讯', link: '/news' }
     ],
 
     sidebar: [
       {
-        text: '实例',
+        text: '课程',
         items: [
-          { text: '实例', link: '/markdown-examples' },
-          { text: 'API 参考', link: '/api-examples' }
+          { text: '课程笔记', link: '/course' }
         ]
       },
       {
-        text: '文档',
+        text: '指南',
         items: [
-          { text: '学生宿舍7S管理标准', link: '/7s' }
+          { text: '学习指南', link: '/guide' },
+          { text: 'Markdown 写作', link: '/guide/writing' }
+        ]
+      },
+      {
+        text: '资源',
+        items: [
+          { text: '实用工具', link: '/tools' },
+          { text: '行业资讯', link: '/news' }
+        ]
+      },
+      {
+        text: '规范',
+        items: [
+          { text: '学生宿舍 7S 管理', link: '/7s' }
         ]
       },
       {

@@ -35,13 +35,13 @@ features:
   - icon: 📝
     title: 写作指南
     details: Markdown 语法、文档排版与协作流程的入门指引,人人可参与贡献。
-    link: /markdown-examples
+    link: /guide/writing
     linkText: 了解详情
   - icon: 📖
-    title: API 参考
-    details: VitePress 提供的 API 参考与默认主题配置示例。
-    link: /api-examples
-    linkText: 查看示例
+    title: 课程笔记
+    details: 计算机应用专业各学科知识点、课堂笔记与习题解析,系统复习好帮手。
+    link: /course
+    linkText: 进入栏目
   - icon: 🌟
     title: 赞赏支持
     details: 如果本站对你有帮助,欢迎通过赞赏支持我们持续维护与更新。

@@ -13,16 +13,34 @@
       <guid>https://hjx-25pc1.xyz/7s</guid>
     </item>
     <item>
-      <title>Markdown 扩展示例</title>
-      <link>https://hjx-25pc1.xyz/markdown-examples</link>
-      <description>VitePress 内置 Markdown 扩展语法示例,涵盖语法高亮、自定义容器等常用写作功能。</description>
-      <guid>https://hjx-25pc1.xyz/markdown-examples</guid>
+      <title>课程笔记</title>
+      <link>https://hjx-25pc1.xyz/course</link>
+      <description>计算机应用专业各学科课程知识点、课堂笔记与习题解析。</description>
+      <guid>https://hjx-25pc1.xyz/course</guid>
     </item>
     <item>
-      <title>运行时 API 示例</title>
-      <link>https://hjx-25pc1.xyz/api-examples</link>
-      <description>VitePress 运行时 API 用法示例,演示如何通过 useData() 在 .md 与 .vue 文件中访问站点、主题与页面数据。</description>
-      <guid>https://hjx-25pc1.xyz/api-examples</guid>
+      <title>学习指南</title>
+      <link>https://hjx-25pc1.xyz/guide</link>
+      <description>Markdown 写作规范、备考攻略、学习心得与文档协作流程。</description>
+      <guid>https://hjx-25pc1.xyz/guide</guid>
+    </item>
+    <item>
+      <title>Markdown 写作指南</title>
+      <link>https://hjx-25pc1.xyz/guide/writing</link>
+      <description>面向班级同学的 Markdown 写作入门,涵盖标题、列表、代码块与提示容器。</description>
+      <guid>https://hjx-25pc1.xyz/guide/writing</guid>
+    </item>
+    <item>
+      <title>实用工具</title>
+      <link>https://hjx-25pc1.xyz/tools</link>
+      <description>同学们推荐并亲测好用的工具与软件,按用途分类整理。</description>
+      <guid>https://hjx-25pc1.xyz/tools</guid>
+    </item>
+    <item>
+      <title>行业资讯</title>
+      <link>https://hjx-25pc1.xyz/news</link>
+      <description>同学们关注或分享的 IT 行业动态、新技术趋势与拓展阅读。</description>
+      <guid>https://hjx-25pc1.xyz/news</guid>
     </item>
     <item>
       <title>赞赏作者</title>
