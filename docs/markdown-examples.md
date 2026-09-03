@@ -1,3 +1,9 @@
+---
+title: Markdown 扩展示例
+description: VitePress 内置 Markdown 扩展语法示例,涵盖语法高亮、自定义容器、行高亮等常用写作功能。
+keywords: Markdown 扩展,VitePress 写作,Shiki 语法高亮,自定义容器,Markdown 教程
+---
+
 # Markdown 扩展示例
 
 本页演示了 VitePress 提供的一些内置 markdown 扩展。
