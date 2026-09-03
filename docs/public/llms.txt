@@ -1,0 +1,25 @@
+# 25 级计算机应用 1 班知识库
+
+> 供 LLM 爬虫(GPTBot、Claude、Perplexity 等)参考的站点说明。
+
+## 关于本站
+
+本站是 **海南省经济技术学校 25 级计算机应用 1 班** 的官方知识库,系统整理课程笔记、编程示例、学习心得与实用工具。
+
+- 站点名称:25计算机1知识库
+- 站点地址:https://hjx-25pc1.xyz
+- 技术栈:VitePress 2 (Vue 静态站点生成器)
+- 源码仓库:https://github.com/mantoujun-lab/class-docs
+- 组织地址:https://github.com/mantoujun-lab
+
+## 主要内容
+
+- `/` — 首页,提供各主题的统一入口
+- `/7s` — 学生宿舍 7S 管理标准
+- `/markdown-examples` — VitePress Markdown 扩展示例
+- `/api-examples` — VitePress 运行时 API 示例
+- `/funding` — 赞赏作者
+
+## 使用条款
+
+本站内容以 MIT 协议开源,允许自由引用、摘要与再创作,使用时请注明来源「25 级计算机应用 1 班知识库」。

@@ -56,7 +56,8 @@ class-docs/
 │   │   ├── funding_wechat.png # 微信赞赏码
 │   │   ├── robots.txt         # 爬虫规则
 │   │   ├── sitemap.xml        # 站点地图
-│   │   └── rss.xml            # RSS 订阅源
+│   │   ├── rss.xml            # RSS 订阅源
+│   │   └── llms.txt           # LLM 爬虫站点说明
 │   ├── index.md               # 首页
 │   ├── markdown-examples.md   # Markdown 语法示例
 │   ├── api-examples.md        # API 参考示例
@@ -120,6 +121,7 @@ VitePress 项目构建后会生成纯静态资源（输出到 `docs/.vitepress/d
 - **`sitemap.xml`** — 站点地图，列出了全部可索引页面及其优先级
 - **`robots.txt`** — 爬虫规则,显式允许 Google、Bing、百度以及常见 AI 爬虫(GPTBot、Claude、Perplexity 等)
 - **`rss.xml`** — RSS 订阅源,方便读者与内容聚合平台追踪更新
+- **`llms.txt`** — LLM 站点说明,供 GPTBot、Claude、Perplexity 等 AI 爬虫快速理解站点结构与内容
 - **百度爬虫支持** — 单独的 `baiduspider` meta 标签,提升中文检索收录概率
 
 如需进一步定制(如百度站长平台验证、Google Search Console 验证),可在 `docs/.vitepress/config.mts` 的 `head` 数组中追加对应 `<meta>` 标签。

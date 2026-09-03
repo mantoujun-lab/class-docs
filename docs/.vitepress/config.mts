@@ -4,8 +4,6 @@ const siteUrl = 'https://hjx-25pc1.xyz'
 const siteName = '25计算机1知识库'
 const siteDescription =
   '海南省经济技术学校 25 级计算机应用 1 班官方知识库,系统整理课程笔记、编程示例、学习心得与实用工具,助力同学共同成长进步。'
-const siteKeywords =
-  '班级文档,知识库,计算机应用,VitePress,学习笔记,编程教程,学生宿舍7S,海南经济技术学校'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -15,33 +13,22 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   head: [
-    ['meta', { charset: 'utf-8' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
-    ['meta', { name: 'description', content: siteDescription }],
-    ['meta', { name: 'keywords', content: siteKeywords }],
     ['meta', { name: 'author', content: 'mantoujun-lab' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
     ['meta', { name: 'baiduspider', content: 'index,follow' }],
     ['meta', { name: 'format-detection', content: 'telephone=no' }],
 
-    // Open Graph
+    // Open Graph (页面级 title/description/url 由 transformPageData 注入)
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: siteName }],
-    ['meta', { property: 'og:title', content: siteName }],
-    ['meta', { property: 'og:description', content: siteDescription }],
-    ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { property: 'og:image', content: `${siteUrl}/favicon.png` }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
 
     // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: siteName }],
-    ['meta', { name: 'twitter:description', content: siteDescription }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:image', content: `${siteUrl}/favicon.png` }],
-
-    // Canonical
-    ['link', { rel: 'canonical', href: siteUrl }],
 
     // Icons / manifest
     ['link', { rel: 'icon', href: '/favicon.png' }],
@@ -58,7 +45,7 @@ export default defineConfig({
       inLanguage: 'zh-CN',
       author: {
         '@type': 'Organization',
-        name: '海南省经济技术学校 25 级计算机应用 1 班',
+        name: 'mantoujun-lab',
         url: 'https://github.com/mantoujun-lab'
       },
       publisher: {
@@ -71,8 +58,32 @@ export default defineConfig({
         target: `${siteUrl}/?q={search_term_string}`,
         'query-input': 'required name=search_term_string'
       }
-    })]
+    }) + '\n']
   ],
+  transformPageData(pageData) {
+    const { frontmatter: fm, relativePath } = pageData
+    const title = fm.title || siteName
+    const description = fm.description || siteDescription
+    const isHome = relativePath === 'index.md' || relativePath === 'README.md'
+    const slug = relativePath
+      .replace(/\.md$/, '')
+      .replace(/\/index$/, '')
+    const canonical = isHome || slug === '' ? `${siteUrl}/` : `${siteUrl}/${slug}`
+
+    const head: Array<[string, Record<string, string>]> = [
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: canonical }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['link', { rel: 'canonical', href: canonical }]
+    ]
+    if (fm.keywords) {
+      head.push(['meta', { name: 'keywords', content: fm.keywords }])
+    }
+
+    fm.head = [...(fm.head || []), ...head]
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: 'favicon.png',
