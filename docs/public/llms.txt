@@ -16,8 +16,11 @@
 
 - `/` — 首页,提供各主题的统一入口
 - `/7s` — 学生宿舍 7S 管理标准
-- `/markdown-examples` — VitePress Markdown 扩展示例
-- `/api-examples` — VitePress 运行时 API 示例
+- `/course` — 课程笔记(计算机应用专业各学科知识点)
+- `/guide` — 学习指南(Markdown 写作、备考攻略、学习心得)
+- `/guide/writing` — Markdown 写作入门指南
+- `/tools` — 实用工具与软件推荐
+- `/news` — 行业资讯与技术前沿
 - `/funding` — 赞赏作者
 
 ## 使用条款
