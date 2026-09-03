@@ -2,13 +2,17 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: 25 级计算机应用 1 班知识库
+description: 海南省经济技术学校 25 级计算机应用 1 班官方知识库首页,提供课程笔记、编程示例、学习心得与实用工具的统一入口,欢迎同学们共建共享。
+keywords: 班级文档,知识库首页,计算机应用,学习笔记,编程教程,VitePress,海南省经济技术学校
+
 hero:
   name: "25 级计算机应用 1 班"
   text: "班级文档 · 知识库"
   tagline: 记录学习点滴 · 分享实用内容 · 共同成长进步
   image:
     src: /favicon.png
-    alt: 班级文档
+    alt: 25 级计算机应用 1 班知识库
   actions:
     - theme: brand
       text: 开始浏览

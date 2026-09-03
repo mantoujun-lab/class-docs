@@ -1,4 +1,7 @@
 ---
+title: 运行时 API 示例
+description: VitePress 运行时 API 用法示例,演示如何通过 useData() 在 .md 与 .vue 文件中访问站点、主题与页面数据。
+keywords: VitePress API,useData,运行时 API,VitePress 教程,前端开发
 outline: deep
 ---
 
