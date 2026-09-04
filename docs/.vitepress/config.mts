@@ -106,6 +106,28 @@ export default defineConfig({
               closeText: '关闭'
             }
           }
+        },
+        // 中文站点 MiniSearch 默认按空白/标点切分,无法召回子串匹配
+        // 这里用空白先分词,再把含中文的词扩展成 1-2 字 gram,既保留英文/数字整词匹配,也让中文子串可召回
+        miniSearch: {
+          options: {
+            tokenize: (text: string) => {
+              const cjkRun = /[\u3400-\u9fff\uf900-\ufaff]+/g
+              return text
+                .split(/(\s+|[^\u3400-\u9fff\uf900-\ufaffa-zA-Z0-9]+)/)
+                .filter((token) => token && !/^\s+$/.test(token))
+                .flatMap((token) => {
+                  if (cjkRun.test(token)) {
+                    cjkRun.lastIndex = 0
+                    return Array.from(token).flatMap((c, i) => [
+                      token.slice(i, i + 1),
+                      token.slice(i, i + 2)
+                    ].filter(Boolean))
+                  }
+                  return [token]
+                })
+            }
+          }
         }
       }
     },
