@@ -9,7 +9,7 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'doc-bottom': () => h(WalineComment),
+      'doc-after': () => h(WalineComment),
     })
   },
 }
