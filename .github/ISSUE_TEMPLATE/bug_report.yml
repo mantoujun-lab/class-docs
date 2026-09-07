@@ -1,0 +1,134 @@
+name: "🐛 Bug 反馈"
+description: "描述需要修复的 Bug (文档/页面/构建)"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你反馈问题 🐛 描述越详细, 我们越容易复现和修复.
+        本仓库是 VitePress 2 站点, 文档源文件位于 `docs/`, 提交前请确认已在本地执行 `pnpm docs:build` 通过.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 简要说明出现了什么问题, 涉及哪个文档目录 (course / guide / tools / news / 其他).
+      placeholder: "在 docs/tools/xxx 页面做 xxx 操作时, 出现了 xxx..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 给出可重现该问题的最小步骤.
+      placeholder: |
+        1. 进入页面 '...'
+        2. 点击 '...'
+        3. 看到 '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+      description: 你原本期望发生什么?
+      placeholder: "应该 ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 实际上发生了什么?
+      placeholder: "结果 ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图 / 日志
+      description: 如有截图或控制台报错, 请贴出来帮助诊断.
+      placeholder: "(可选) 拖拽图片到此处即可上传"
+    validations:
+      required: false
+
+  - type: input
+    id: url
+    attributes:
+      label: 出现页面 URL
+      description: 出现问题的页面地址 (线上站点或本地预览 `http://localhost:5173/...`).
+      placeholder: "https://hjx-25pc1.xyz/... 或 http://localhost:5173/..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 浏览器
+      multiple: true
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - 其他 (在 "其他信息" 里注明)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: 设备类型
+      multiple: true
+      options:
+        - 桌面端 (Windows)
+        - 桌面端 (macOS)
+        - 桌面端 (Linux)
+        - 手机 (Android)
+        - 手机 (iOS)
+        - 平板
+    validations:
+      required: true
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: 构建状态
+      description: 本地 `pnpm docs:build` 是否能复现问题?
+      options:
+        - 本地构建通过, 仅线上有问题
+        - 本地构建失败, 报错信息见下方
+        - 未尝试本地构建
+        - 仅本地预览 (`pnpm docs:dev`) 有问题
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统 / 版本
+      placeholder: "Windows 11, iOS 17..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 其他信息
+      description: 任何有助于定位问题的额外内容.
+      placeholder: "(可选)"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 确认事项
+      options:
+        - label: 我已搜索过现有的 issues, 没有重复反馈.
+          required: true
