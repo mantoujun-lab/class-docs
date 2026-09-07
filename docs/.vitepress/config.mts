@@ -182,14 +182,15 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 MIT 协议开源',
-      copyright: `© ${new Date().getFullYear()} mantoujun's Lab`
+      message: '基于 MIT 协议开源 · 由 25 级计算机应用 1 班同学共同维护',
+      copyright: `© ${new Date().getFullYear()} mantoujun-lab`
     },
 
     // “编辑此页”链接:点击跳转到 GitHub 上的源文件,方便贡献者直接修改
     // 文档源文件统一存放在 docs/ 目录下,文本使用“编辑此页”与中文用户更友好
     editLink: {
       pattern: 'https://github.com/mantoujun-lab/class-docs/edit/main/docs/:path',
+      text: '编辑此页'
     }
   }
 })
