@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "vitepress": "2.0.0-alpha.19"
+    "vitepress": "2.0.0-alpha.19",
+    "@waline/client": "^3.5.7",
+    "vue": "^3.5.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
