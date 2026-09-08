@@ -133,46 +133,60 @@ export default defineConfig({
     },
     nav: [
       { text: '主页', link: '/' },
-      { text: '课程', link: '/course' },
-      { text: '指南', link: '/guide' },
-      { text: '工具', link: '/tools' },
-      { text: '资讯', link: '/news' }
+      { text: '课程', link: '/course/' },
+      { text: '指南', link: '/guide/' },
+      { text: '资源', link: '/resources/' },
+      { text: '班级', link: '/class/' }
     ],
 
-    sidebar: [
-      {
-        text: '课程',
-        items: [
-          { text: '课程笔记', link: '/course' }
-        ]
-      },
-      {
-        text: '指南',
-        items: [
-          { text: '学习指南', link: '/guide' },
-          { text: 'Markdown 写作', link: '/guide/writing' }
-        ]
-      },
-      {
-        text: '资源',
-        items: [
-          { text: '实用工具', link: '/tools' },
-          { text: '行业资讯', link: '/news' }
-        ]
-      },
-      {
-        text: '规范',
-        items: [
-          { text: '学生宿舍 7S 管理', link: '/7s' }
-        ]
-      },
-      {
-        text: '贡献',
-        items: [
-          { text: '赞赏', link: '/funding' }
-        ]
-      }
-    ],
+    // 按路径分组的多侧边栏:进入某个栏目只显示该栏目的目录,避免全站共用一份菜单
+    sidebar: {
+      '/course/': [
+        {
+          text: '课程笔记',
+          items: [
+            { text: '栏目概览', link: '/course/' }
+          ]
+        }
+      ],
+      '/guide/': [
+        {
+          text: '学习指南',
+          items: [
+            { text: '栏目概览', link: '/guide/' },
+            { text: 'Markdown 写作', link: '/guide/writing' },
+            { text: '参与共建', link: '/guide/contributing' }
+          ]
+        }
+      ],
+      '/resources/': [
+        {
+          text: '资源',
+          items: [
+            { text: '栏目概览', link: '/resources/' },
+            { text: '实用工具', link: '/resources/tools' },
+            { text: '行业资讯', link: '/resources/news' }
+          ]
+        }
+      ],
+      '/class/': [
+        {
+          text: '班级事务',
+          items: [
+            { text: '栏目概览', link: '/class/' },
+            { text: '宿舍 7S 管理', link: '/class/7s' }
+          ]
+        }
+      ],
+      '/funding': [
+        {
+          text: '支持本站',
+          items: [
+            { text: '赞赏作者', link: '/funding' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mantoujun-lab' },

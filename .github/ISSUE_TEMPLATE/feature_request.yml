@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         感谢你为 25 级计算机应用 1 班知识库提出新想法 ✨ 请尽量填写完整, 这有助于我们理解你的需求并尽快跟进.
-        站点基于 VitePress 2 构建, 内容放置在 `docs/course | guide | tools | news` 等目录.
+        站点基于 VitePress 2 构建, 内容放置在 `docs/course | guide | resources | class` 等目录.
 
   - type: textarea
     id: description
@@ -54,9 +54,9 @@ body:
       options:
         - 课程笔记 (docs/course)
         - 学习指南 (docs/guide)
-        - 实用工具 (docs/tools)
-        - 行业资讯 (docs/news)
-        - 宿舍 7S / 班级规范
+        - 实用工具 (docs/resources/tools)
+        - 行业资讯 (docs/resources/news)
+        - 宿舍 7S / 班级规范 (docs/class)
         - 首页 / 导航栏 / 侧边栏
         - 搜索 / 国际化 (i18n)
         - 样式 / 主题 / 组件复用

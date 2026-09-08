@@ -8,21 +8,21 @@
     <atom:link href="https://hjx-25pc1.xyz/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学生宿舍 7S 管理标准</title>
-      <link>https://hjx-25pc1.xyz/7s</link>
-      <description>学生宿舍 7S 管理标准与实施细则,营造整洁有序的生活环境。</description>
-      <guid>https://hjx-25pc1.xyz/7s</guid>
+      <link>https://hjx-25pc1.xyz/class/7s</link>
+      <description>学生宿舍 7S 管理标准与实施细则,涵盖物品摆放、阳台整理、安全节约与卫生要求。</description>
+      <guid>https://hjx-25pc1.xyz/class/7s</guid>
     </item>
     <item>
       <title>课程笔记</title>
-      <link>https://hjx-25pc1.xyz/course</link>
-      <description>计算机应用专业各学科课程知识点、课堂笔记与习题解析。</description>
-      <guid>https://hjx-25pc1.xyz/course</guid>
+      <link>https://hjx-25pc1.xyz/course/</link>
+      <description>计算机应用专业各学科课程知识点、课堂笔记与习题解析的统一入口。</description>
+      <guid>https://hjx-25pc1.xyz/course/</guid>
     </item>
     <item>
       <title>学习指南</title>
-      <link>https://hjx-25pc1.xyz/guide</link>
-      <description>Markdown 写作规范、备考攻略、学习心得与文档协作流程。</description>
-      <guid>https://hjx-25pc1.xyz/guide</guid>
+      <link>https://hjx-25pc1.xyz/guide/</link>
+      <description>Markdown 写作规范、文档协作流程、备考攻略与学习心得。</description>
+      <guid>https://hjx-25pc1.xyz/guide/</guid>
     </item>
     <item>
       <title>Markdown 写作指南</title>
@@ -31,16 +31,28 @@
       <guid>https://hjx-25pc1.xyz/guide/writing</guid>
     </item>
     <item>
+      <title>参与共建</title>
+      <link>https://hjx-25pc1.xyz/guide/contributing</link>
+      <description>从本地预览到提交 Pull Request 的完整贡献流程,几步就能贡献一页文档。</description>
+      <guid>https://hjx-25pc1.xyz/guide/contributing</guid>
+    </item>
+    <item>
       <title>实用工具</title>
-      <link>https://hjx-25pc1.xyz/tools</link>
+      <link>https://hjx-25pc1.xyz/resources/tools</link>
       <description>同学们推荐并亲测好用的工具与软件,按用途分类整理。</description>
-      <guid>https://hjx-25pc1.xyz/tools</guid>
+      <guid>https://hjx-25pc1.xyz/resources/tools</guid>
     </item>
     <item>
       <title>行业资讯</title>
-      <link>https://hjx-25pc1.xyz/news</link>
+      <link>https://hjx-25pc1.xyz/resources/news</link>
       <description>同学们关注或分享的 IT 行业动态、新技术趋势与拓展阅读。</description>
-      <guid>https://hjx-25pc1.xyz/news</guid>
+      <guid>https://hjx-25pc1.xyz/resources/news</guid>
+    </item>
+    <item>
+      <title>班级事务</title>
+      <link>https://hjx-25pc1.xyz/class/</link>
+      <description>班级制度与规范类文档的统合入口。</description>
+      <guid>https://hjx-25pc1.xyz/class/</guid>
     </item>
     <item>
       <title>赞赏作者</title>
