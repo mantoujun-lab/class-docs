@@ -6,19 +6,14 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hjx-25pc1.xyz/7s</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hjx-25pc1.xyz/course</loc>
+    <loc>https://hjx-25pc1.xyz/course/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hjx-25pc1.xyz/guide</loc>
+    <loc>https://hjx-25pc1.xyz/guide/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hjx-25pc1.xyz/guide/writing</loc>
@@ -26,14 +21,34 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hjx-25pc1.xyz/tools</loc>
+    <loc>https://hjx-25pc1.xyz/guide/contributing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hjx-25pc1.xyz/resources/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hjx-25pc1.xyz/resources/tools</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hjx-25pc1.xyz/news</loc>
+    <loc>https://hjx-25pc1.xyz/resources/news</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hjx-25pc1.xyz/class/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hjx-25pc1.xyz/class/7s</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hjx-25pc1.xyz/funding</loc>
