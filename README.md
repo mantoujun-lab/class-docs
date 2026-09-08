@@ -64,11 +64,13 @@ class-docs/
 │   ├── guide/                 # 学习指南
 │   │   ├── index.md           # 栏目首页
 │   │   └── writing.md         # Markdown 写作指南
-│   ├── tools/                 # 实用工具
-│   │   └── index.md           # 栏目首页
-│   ├── news/                  # 行业资讯
-│   │   └── index.md           # 栏目首页
-│   ├── 7s.md                  # 学生宿舍 7S 管理标准
+│   ├── resources/             # 资源栏目（工具与资讯）
+│   │   ├── index.md           # 栏目首页
+│   │   ├── tools.md           # 实用工具
+│   │   └── news.md            # 行业资讯
+│   ├── class/                 # 班级事务
+│   │   ├── index.md           # 栏目首页
+│   │   └── 7s.md              # 学生宿舍 7S 管理标准
 │   ├── funding.md             # 赞赏页面
 │   └── index.md               # 首页
 ├── .github/

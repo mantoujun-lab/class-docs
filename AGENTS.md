@@ -9,9 +9,8 @@ This repository is a Chinese static documentation site built with **VitePress 2*
 - `docs/index.md`: site homepage
 - `docs/course/`: course notes
 - `docs/guide/`: study guides and writing guidance
-- `docs/tools/`: practical tools
-- `docs/news/`: industry news
-- `docs/7s.md`: dormitory 7S management standard
+- `docs/resources/`: practical tools (`tools.md`) and industry news (`news.md`)
+- `docs/class/`: class standards, including the 7S management standard (`7s.md`)
 - `docs/funding.md`: sponsorship page
 - `docs/public/`: static assets copied to the site root
 - `docs/.vitepress/config.mts`: VitePress configuration, navigation, sidebar, and SEO settings

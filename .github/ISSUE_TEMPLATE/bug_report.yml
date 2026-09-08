@@ -13,8 +13,8 @@ body:
     id: description
     attributes:
       label: 问题描述
-      description: 简要说明出现了什么问题, 涉及哪个文档目录 (course / guide / tools / news / 其他).
-      placeholder: "在 docs/tools/xxx 页面做 xxx 操作时, 出现了 xxx..."
+      description: 简要说明出现了什么问题, 涉及哪个文档目录 (course / guide / resources / class / 其他).
+      placeholder: "在 docs/resources/tools 页面做 xxx 操作时, 出现了 xxx..."
     validations:
       required: true
 
