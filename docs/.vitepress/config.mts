@@ -145,7 +145,16 @@ export default defineConfig({
         {
           text: '课程笔记',
           items: [
-            { text: '栏目概览', link: '/course/' }
+            { text: '栏目概览', link: '/course/' },
+            {
+              text: 'Python pandas 题型总结',
+              items: [
+                { text: '栏目概览', link: '/course/python-pandas/' },
+                { text: '数据预览', link: '/course/python-pandas/preview' },
+                { text: '数据清洗', link: '/course/python-pandas/cleaning' },
+                { text: '数据打标签', link: '/course/python-pandas/labeling' }
+              ]
+            }
           ]
         }
       ],
