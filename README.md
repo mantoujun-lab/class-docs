@@ -1,19 +1,10 @@
 <div align="center">
 
-# 📚 班级文档
+![class-docs](https://socialify.git.ci/mantoujun-lab/class-docs/image?custom_description=%E6%B5%B7%E5%8D%97%E7%9C%81%E7%BB%8F%E6%B5%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E6%A0%A1+%C2%B7+25+%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8+1+%E7%8F%AD+%C2%B7+%E7%9F%A5%E8%AF%86%E7%82%B9%E6%96%87%E6%A1%A3%E5%BA%93&description=1&forks=1&issues=1&language=1&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiM0YTZjZjciIGQ9Ik0xMiAydjRxMCAxLjI1Ljg3NSAyLjEyNVQxNSA5aDR2MTFxMCAuODI1LS41ODcgMS40MTNUMTcgMjJIN3EtLjgyNSAwLTEuNDEyLS41ODdUNSAyMFY0cTAtLjgyNS41ODgtMS40MTJUNyAyem0yIDBsNSA1aC00cS0uNDI1IDAtLjcxMi0uMjg4VDE0IDZ6bS00IDE3aDJxLjQyNSAwIC43MTMtLjI4OFQxMyAxOHQtLjI4OC0uNzEyVDEyIDE3aC0ycS0uNDI1IDAtLjcxMi4yODhUOSAxOHQuMjg4LjcxM1QxMCAxOW0wLTRoNHEuNDI1IDAgLjcxMy0uMjg4VDE1IDE0dC0uMjg4LS43MTJUMTQgMTNoLTRxLS40MjUgMC0uNzEyLjI4OFQ5IDE0dC4yODguNzEzVDEwIDE1IiAvPgo8L3N2Zz4K&name=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto)
 
-**海南省经济技术学校 25 级计算机应用 1 班 · 知识点文档库**
-
-[![GitHub License](https://img.shields.io/github/license/mantoujun-lab/class-docs?style=for-the-badge)](LICENSE)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mantoujun-lab/class-docs/pullfrog.yml?style=for-the-badge)](https://github.com/mantoujun-lab/class-docs/actions/workflows/pullfrog.yml)
-[![VitePress](https://img.shields.io/badge/VitePress-black?style=for-the-badge&logo=vitepress)](https://vitepress.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-24_LTS-black?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
-
-[访问文档站](https://hjx-25pc1.xyz) · [GitHub 组织](https://github.com/mantoujun-lab)
+[访问文档站](https://docs.hjx-25pc1.xyz) · [GitHub 组织](https://github.com/mantoujun-lab)
 
 </div>
-
----
 
 ## 👋 介绍
 
@@ -37,12 +28,27 @@
 
 ## 🚀 项目
 
+### 当前状态
+
+下面的徽章展示本班级知识库的实时状态。
+
+![GitHub repo size](https://img.shields.io/github/repo-size/mantoujun-lab/class-docs?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/mantoujun-lab/class-docs?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/mantoujun-lab/class-docs?style=for-the-badge)
+
+
 ### 技术栈
+
+[![VitePress](https://img.shields.io/badge/VitePress-black?style=for-the-badge&logo=vitepress)](https://vitepress.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white
+)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-24_LTS-black?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mantoujun-lab/class-docs/ci.yml?style=for-the-badge&logo=github)](https://github.com/mantoujun-lab/class-docs/actions/workflows/ci.yml)
 
 - [VitePress](https://vitepress.dev/) — Vue 驱动的静态站点生成器，专为技术文档打造
 - [TypeScript](https://www.typescriptlang.org/) — 配置文件使用静态类型，更健壮易维护
 - [Node.js](https://nodejs.org/) 24 LTS — 本地开发与构建所需的运行时环境
-- [GitHub Actions](https://github.com/features/actions) — 自动化工作流（Pullfrog AI Agent）
+- [GitHub Actions](https://github.com/features/actions) — 自动化工作流
 
 ### 项目结构
 
@@ -167,5 +173,7 @@ VitePress 项目构建后会生成纯静态资源（输出到 `docs/.vitepress/d
 <img src="./docs/public/funding_wechat.png" alt="微信赞赏码" width="240" />
 
 ## 📄 许可证
+
+[![GitHub License](https://img.shields.io/github/license/mantoujun-lab/class-docs?style=for-the-badge)](LICENSE)
 
 本项目使用 [MIT License](LICENSE) 开源。可以自由地使用、修改和分发本项目的代码与内容。
