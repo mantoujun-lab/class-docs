@@ -73,7 +73,7 @@ pip install pandas
 题 1 至题 6 操作的是 `house_module.csv`,题 7、题 8 与标注任务则重新切回 `house_module2.csv`(字段相同,但数据集独立)。两份 CSV 不要混用,文件名对不上时,后续 `read_csv` 会直接报错。
 :::
 
-## 栏目内容
+## 本栏目内容
 
 | 页面 | 内容说明 |
 | --- | --- |
