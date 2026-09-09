@@ -3,6 +3,7 @@ title: Python 数据分析环境搭建
 description: 讲解 Anaconda 的安装、虚拟环境管理与包管理,以及 Jupyter Notebook 的启动、界面、功能扩展与常用快捷键,帮助独立完成开发环境搭建。
 keywords: Python 数据分析环境搭建,Anaconda,Jupyter Notebook,虚拟环境,conda,pip,Jupyter 快捷键,海南省经济技术学校
 ---
+# Python 数据分析环境搭建
 
 ## 学习目标
 

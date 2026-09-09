@@ -1,8 +1,9 @@
 ---
 title: 数据分组操作
-description: 介绍 pandas 的 groupby 分组操作，包括分组聚合、transform 转换、filter 过滤与 DataFrameGroupBy 对象的使用，配合 gapminder、tips、weight_loss 数据集演示实战流程。
+description: 介绍 pandas 的 groupby 分组操作,包括分组聚合、transform 转换、filter 过滤与 DataFrameGroupBy 对象的使用,配合 gapminder、tips、weight_loss 数据集演示实战流程。
 keywords: pandas,groupby,聚合,transform,filter,DataFrameGroupBy,agg,aggregate,MultiIndex,reset_index
 ---
+# 数据分组操作
 
 ## 学习目标
 
@@ -14,25 +15,25 @@ keywords: pandas,groupby,聚合,transform,filter,DataFrameGroupBy,agg,aggregate,
 
 ### 1.1 分组聚合简介
 
-> 在 SQL 中我们经常使用 GROUP BY 将某个字段，按不同的取值进行分组，在 pandas 中也有 groupby 函数；
+> 在 SQL 中我们经常使用 GROUP BY 将某个字段,按不同的取值进行分组,在 pandas 中也有 groupby 函数；
 >
-> 分组之后，每组都会有至少 1 条数据，将这些数据进一步处理返回单个值的过程就是聚合。
+> 分组之后,每组都会有至少 1 条数据,将这些数据进一步处理返回单个值的过程就是聚合。
 >
-> 比如：分组之后计算算术平均值，或者分组之后计算频数，都属于聚合。
+> 比如：分组之后计算算术平均值,或者分组之后计算频数,都属于聚合。
 
 **基本格式**：
 
 | 方式 | 说明 |
 | --- | --- |
-| 方式 1：<br>`df.groupby(列标签, ...).列标签.聚合函数()` | 按指定列分组，并对分组数据<br>的相应列进行相应的聚合操作 |
-| 方式 2：<br>`df.groupby(列标签, ...).agg({'列标签': '聚合', ...})`<br>`df.groupby(列标签, ...).列表签.agg(聚合...)` | 按指定列分组，并对分组数据<br>的相应列进行相应的聚合操作 |
-| 方式 3：<br>`df.groupby(列标签, ...).aggregate({'列标签': '聚合', ...})`<br>`df.groupby(列标签, ...).列表签.aggregate(聚合...)` | 按指定列分组，并对分组数据<br>的相应列进行相应的聚合操作 |
+| 方式 1：<br>`df.groupby(列标签, ...).列标签.聚合函数()` | 按指定列分组,并对分组数据<br>的相应列进行相应的聚合操作 |
+| 方式 2：<br>`df.groupby(列标签, ...).agg({'列标签': '聚合', ...})`<br>`df.groupby(列标签, ...).列表签.agg(聚合...)` | 按指定列分组,并对分组数据<br>的相应列进行相应的聚合操作 |
+| 方式 3：<br>`df.groupby(列标签, ...).aggregate({'列标签': '聚合', ...})`<br>`df.groupby(列标签, ...).列表签.aggregate(聚合...)` | 按指定列分组,并对分组数据<br>的相应列进行相应的聚合操作 |
 
 > 注意：
 >
-> 1）方式 1 只能使用 pandas 内置的聚合方法，并且只能进行一种聚合
+> 1）方式 1 只能使用 pandas 内置的聚合方法,并且只能进行一种聚合
 >
-> 2）方式 2 和方式 3 除了能够使用 pandas 内置的聚合方法，还可以使用其他聚合方法，并且可以进行多种聚合
+> 2）方式 2 和方式 3 除了能够使用 pandas 内置的聚合方法,还可以使用其他聚合方法,并且可以进行多种聚合
 
 ### 1.2 pandas 内置的聚合方法
 
@@ -49,7 +50,7 @@ keywords: pandas,groupby,聚合,transform,filter,DataFrameGroupBy,agg,aggregate,
 | max | np.max | 求最大值 |
 | sum | np.sum | 求和 |
 | var | np.var | 方差 |
-| describe |  | 计数、平均值、标准差，最小值、分位数、最大值 |
+| describe |  | 计数、平均值、标准差,最小值、分位数、最大值 |
 | first |  | 返回第一行 |
 | last |  | 返回最后一行 |
 | nth |  | 返回第 N 行（Python 从 0 开始计数） |
@@ -132,12 +133,12 @@ gapminder.groupby('year').lifeExp.agg(diff_lifeExp, global_mean=global_mean)
 
 ## 2. transform 转换
 
-- transform 转换，需要把 DataFrame 中的值传递给一个函数，而后由该函数"转换"数据
-- aggregate（聚合）返回单个聚合值，但 transform 不会减少数据量
+- transform 转换,需要把 DataFrame 中的值传递给一个函数,而后由该函数"转换"数据
+- aggregate（聚合）返回单个聚合值,但 transform 不会减少数据量
 
 ### 2.1 transform 功能演示
 
-> 需求：按年分组，并计算组内每个人的预期寿命和该组平均年龄的差值
+> 需求：按年分组,并计算组内每个人的预期寿命和该组平均年龄的差值
 
 ```python
 def lifeExp_diff(x):
@@ -151,9 +152,9 @@ gapminder.groupby('year').lifeExp.transform(lifeExp_diff)
 
 ### 2.2 transform 分组填充缺失值
 
-之前介绍了填充缺失值的各种方法，对于某些数据集，可以使用列的平均值来填充缺失值。某些情况下，可以考虑将列进行分组，分组之后取平均再填充缺失值。
+之前介绍了填充缺失值的各种方法,对于某些数据集,可以使用列的平均值来填充缺失值。某些情况下,可以考虑将列进行分组,分组之后取平均再填充缺失值。
 
-1）加载 `tips.csv` 数据集，并从其中随机取出 `10` 条数据
+1）加载 `tips.csv` 数据集,并从其中随机取出 `10` 条数据
 
 ```python
 tips_10 = pd.read_csv('./data/tips.csv').sample(10, random_state=42)
@@ -182,9 +183,9 @@ tips_10.groupby('sex').count()
 
 结果说明：
 
-> total_bill 列中，Female 性别的有 1 个缺失，Male 性别的有 2 个缺失
+> total_bill 列中,Female 性别的有 1 个缺失,Male 性别的有 2 个缺失
 
-4）定义函数，按性别分组填充缺失值
+4）定义函数,按性别分组填充缺失值
 
 ```python
 def fill_na_mean(x):
@@ -210,9 +211,9 @@ tips_10
 
 ### 2.3 transform 练习
 
-**需求**：使用 `weight_loss.csv` 数据集，找到减肥比赛赢家
+**需求**：使用 `weight_loss.csv` 数据集,找到减肥比赛赢家
 
-> 注：`weight_loss.csv` 数据集中，包含了 `Bob`、`Amy` 两个人从 1 月到 4 月每周的减肥记录
+> 注：`weight_loss.csv` 数据集中,包含了 `Bob`、`Amy` 两个人从 1 月到 4 月每周的减肥记录
 
 1）加载 `weight_loss.csv` 数据集
 
@@ -255,7 +256,7 @@ weight_loss.head()
 
 ![img](/data-analysis/chapter04-37.webp)
 
-5）查找每个月最后一周的数据，用来比较减肥效果
+5）查找每个月最后一周的数据,用来比较减肥效果
 
 ```python
 week4 = weight_loss.query('Week == "Week 4"')
@@ -264,7 +265,7 @@ week4
 
 ![img](/data-analysis/chapter04-38.webp)
 
-6）在第四周数据基础上，找到 Bob 和 Amy 的减肥数据
+6）在第四周数据基础上,找到 Bob 和 Amy 的减肥数据
 
 ```python
 week4_Bob = week4.query('Name == "Bob"')[['Month', 'Perc Weight Loss']]
@@ -280,7 +281,7 @@ week4_Amy
 
 ![img](/data-analysis/chapter04-40.webp)
 
-7）比较 Bob 和 Amy 的减肥效果，Amy 的减肥效果更明显
+7）比较 Bob 和 Amy 的减肥效果,Amy 的减肥效果更明显
 
 ```python
 week4_Bob.set_index('Month') - week4_Amy.set_index('Month')
@@ -290,9 +291,9 @@ week4_Bob.set_index('Month') - week4_Amy.set_index('Month')
 
 ## 3. 分组过滤
 
-> 使用 groupby 方法还可以过滤数据，调用 filter 方法，传入一个返回布尔值的函数，返回 False 的数据会被过滤掉
+> 使用 groupby 方法还可以过滤数据,调用 filter 方法,传入一个返回布尔值的函数,返回 False 的数据会被过滤掉
 
-1）使用 `tips.csv` 用餐数据集，加载数据并统计不同用餐人数的数量
+1）使用 `tips.csv` 用餐数据集,加载数据并统计不同用餐人数的数量
 
 ```python
 tips = pd.read_csv('./data/tips.csv')
@@ -308,7 +309,7 @@ tips['size'].value_counts()
 
 ![img](/data-analysis/chapter04-44.webp)
 
-> 结果显示：人数为 1、5 和 6 人的数据比较少，考虑将这部分数据过滤掉
+> 结果显示：人数为 1、5 和 6 人的数据比较少,考虑将这部分数据过滤掉
 
 ```python
 tips_filtered = tips.groupby('size').filter(lambda x: x['size'].count() > 30)
@@ -329,7 +330,7 @@ tips_filtered['size'].value_counts()
 
 ### 4.1 分组操作
 
-1）准备数据，加载 `tips.csv` 数据集，随机取出其中的 10 条数据
+1）准备数据,加载 `tips.csv` 数据集,随机取出其中的 10 条数据
 
 ```python
 tips_10 = pd.read_csv('./data/tips.csv').sample(10, random_state=42)
@@ -338,7 +339,7 @@ tips_10
 
 ![img](/data-analysis/chapter04-47.webp)
 
-2）调用 `groupby` 方法，创建分组对象
+2）调用 `groupby` 方法,创建分组对象
 
 ```python
 sex_groups = tips_10.groupby('sex')
@@ -347,7 +348,7 @@ sex_groups
 
 ![img](/data-analysis/chapter04-48.webp)
 
-> 注意：sex_groups 是一个 DataFrameGroupBy 对象，如果想查看计算过的分组，可以借助 groups 属性实现
+> 注意：sex_groups 是一个 DataFrameGroupBy 对象,如果想查看计算过的分组,可以借助 groups 属性实现
 
 ```python
 sex_groups.groups
@@ -355,9 +356,9 @@ sex_groups.groups
 
 ![img](/data-analysis/chapter04-49.webp)
 
-结果说明：上面返回的结果是 DataFrame 的索引，实际上就是原始数据的行数。
+结果说明：上面返回的结果是 DataFrame 的索引,实际上就是原始数据的行数。
 
-3）在 DataFrameGroupBy 对象基础上，直接就可以进行 aggregate、transform 等计算
+3）在 DataFrameGroupBy 对象基础上,直接就可以进行 aggregate、transform 等计算
 
 ```python
 sex_groups.mean()
@@ -365,7 +366,7 @@ sex_groups.mean()
 
 ![img](/data-analysis/chapter04-50.webp)
 
-结果说明：上面结果直接计算了按 sex 分组后，所有列的平均值，但只返回了数值列的结果，非数值列不会计算平均值。
+结果说明：上面结果直接计算了按 sex 分组后,所有列的平均值,但只返回了数值列的结果,非数值列不会计算平均值。
 
 4）通过 `get_group` 方法选择分组
 
@@ -383,7 +384,7 @@ sex_groups.get_group('Male')
 
 ### 4.2 遍历分组
 
-通过 DataFrameGroupBy 对象，可以遍历所有分组，相比于在 groupby 之后使用 aggregate、transform 和 filter，有时候使用 for 循环解决问题更简单：
+通过 DataFrameGroupBy 对象,可以遍历所有分组,相比于在 groupby 之后使用 aggregate、transform 和 filter,有时候使用 for 循环解决问题更简单：
 
 ```python
 for sex_group in sex_groups:
@@ -393,7 +394,7 @@ for sex_group in sex_groups:
 
 ![img](/data-analysis/chapter04-53.webp)
 
-> 注意：DataFrameGroupBy 对象不支持下标取值，会报错
+> 注意：DataFrameGroupBy 对象不支持下标取值,会报错
 
 ```python
 # 这句代码会出错
@@ -414,9 +415,9 @@ for sex_group in sex_groups:
 
 ### 4.3 多个分组
 
-> 前面使用的 groupby 语句只包含一个变量，可以在 groupby 中添加多个变量
+> 前面使用的 groupby 语句只包含一个变量,可以在 groupby 中添加多个变量
 
-比如上面用到的 `tips.csv` 数据集，可以使用 groupby 按性别和用餐时间分别计算小费数据的平均值：
+比如上面用到的 `tips.csv` 数据集,可以使用 groupby 按性别和用餐时间分别计算小费数据的平均值：
 
 ```python
 group_avg = tips_10.groupby(['sex', 'time']).mean()
@@ -441,7 +442,7 @@ group_avg.index
 
 ![img](/data-analysis/chapter04-58.webp)
 
-> 可以看到，多个分组之后返回的是 MultiIndex，如果想得到一个普通的 DataFrame，可以在结果上调用 reset_index 方法
+> 可以看到,多个分组之后返回的是 MultiIndex,如果想得到一个普通的 DataFrame,可以在结果上调用 reset_index 方法
 
 ```python
 group_avg.reset_index()
@@ -449,7 +450,7 @@ group_avg.reset_index()
 
 ![img](/data-analysis/chapter04-57.webp)
 
-也可以在分组的时候通过 `as_index=False` 参数（默认是 True），效果与调用 reset_index() 一样。
+也可以在分组的时候通过 `as_index=False` 参数（默认是 True）,效果与调用 reset_index() 一样。
 
 ```python
 # as_index=False：分组字段不作为结果中的行标签索引
@@ -460,7 +461,7 @@ tips.groupby(['sex', 'time'], as_index=False).mean()
 
 ## 总结
 
-- 分组是数据分析中常见的操作，有助于从不同角度观察数据
-- 分组之后可以得到 DataFrameGroupBy 对象，该对象可以进行聚合、转换、过滤操作
-- 分组之后的数据处理可以使用已有的内置函数，也可以使用自定义函数
-- 分组不但可以对单个字段进行分组，也可以对多个字段进行分组，多个字段分组之后可以得到 MultiIndex 数据，可以通过 reset_index 方法将数据变成普通的 DataFrame
+- 分组是数据分析中常见的操作,有助于从不同角度观察数据
+- 分组之后可以得到 DataFrameGroupBy 对象,该对象可以进行聚合、转换、过滤操作
+- 分组之后的数据处理可以使用已有的内置函数,也可以使用自定义函数
+- 分组不但可以对单个字段进行分组,也可以对多个字段进行分组,多个字段分组之后可以得到 MultiIndex 数据,可以通过 reset_index 方法将数据变成普通的 DataFrame

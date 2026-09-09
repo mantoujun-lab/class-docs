@@ -1,8 +1,9 @@
 ---
-title: Python 数据分析简介
+title: 第 1 章 Python 数据分析简介
 description: 25 级计算机应用 1 班 Python 数据分析课程讲义第一章,介绍 Python 数据分析的优势与常用开源库,并完成 Anaconda 与 Jupyter Notebook 开发环境搭建。
 keywords: Python 数据分析,数据分析简介,Anaconda,Jupyter Notebook,NumPy,pandas,matplotlib,seaborn,scikit-learn,海南省经济技术学校
 ---
+# 第 1 章 Python 数据分析简介
 
 本栏目对应《Python 数据分析》课程讲义第 1 章,围绕「为什么用 Python 做数据分析」与「如何搭建开发环境」两个问题展开,帮助大家在写第一行数据处理代码之前,先把工具链和概念框架理顺 (๑•̀ㅂ•́)و✧。
 
@@ -10,7 +11,7 @@ keywords: Python 数据分析,数据分析简介,Anaconda,Jupyter Notebook,NumPy
 
 本章内容遵循 **「认识优势 → 选定工具 → 装好环境 → 跑通 Notebook」** 的顺序,建议按顺序学习,前一小节的概念会在后一小节直接使用:
 
-```
+```text
 ┌───────────────┐    ┌───────────────┐
 │ 数据分析简介  │ ─→ │ 开发环境搭建 │
 │  (01 节)      │    │  (02 节)     │
@@ -43,4 +44,4 @@ keywords: Python 数据分析,数据分析简介,Anaconda,Jupyter Notebook,NumPy
 
 ---
 
-> 📌 本章内容改编自 GitBook 版《Django 课程讲义》第 1 章,原始讲义作者 BigCat,由班级同学整理迁移到 VitePress 站点。
+> 📌 本章内容整理自 GitBook 版讲义,由班级同学整理迁移到 VitePress 站点。

@@ -1,8 +1,9 @@
 ---
-title: apply自定义函数
-description: 介绍 pandas 的 apply 与 applymap 用法，通过 Series、DataFrame 与 titanic 数据集演示自定义函数、函数向量化与 lambda 匿名表达式的实际应用。
+title: apply 自定义函数
+description: 介绍 pandas 的 apply 与 applymap 用法,通过 Series、DataFrame 与 titanic 数据集演示自定义函数、函数向量化与 lambda 匿名表达式的实际应用。
 keywords: apply,applymap,自定义函数,函数向量化,lambda,Series,DataFrame,titanic
 ---
+# apply 自定义函数
 
 ## 学习目标
 
@@ -12,19 +13,19 @@ keywords: apply,applymap,自定义函数,函数向量化,lambda,Series,DataFrame
 
 ## 1. apply 函数简介
 
-pandas 的 `apply()` 函数可以作用于 `Series` 或者整个 `DataFrame`，功能也是自动遍历整个 `Series` 或者 `DataFrame`，对每一个元素运行指定的函数。
+pandas 的 `apply()` 函数可以作用于 `Series` 或者整个 `DataFrame`,功能也是自动遍历整个 `Series` 或者 `DataFrame`,对每一个元素运行指定的函数。
 
-1）pandas 提供了很多数据处理的 API，但当提供的 API 不能满足需求的时候，需要自己编写数据处理函数, 这个时候可以使用 apply 函数
+1）pandas 提供了很多数据处理的 API,但当提供的 API 不能满足需求的时候,需要自己编写数据处理函数, 这个时候可以使用 apply 函数
 
-2）apply 函数可以接收一个自定义函数，可以将 DataFrame 的行或列数据传递给自定义函数处理
+2）apply 函数可以接收一个自定义函数,可以将 DataFrame 的行或列数据传递给自定义函数处理
 
-3）apply 函数类似于编写一个 for 循环，遍历行、列的每一个元素, 但比使用 for 循环效率高很多
+3）apply 函数类似于编写一个 for 循环,遍历行、列的每一个元素, 但比使用 for 循环效率高很多
 
 ## 2. Series 的 apply 方法
 
-> Series 有一个 apply 方法，该方法有一个 func 参数，当传入一个函数后，apply 方法就会把传入的函数应用于Series 的每个元素.
+> Series 有一个 apply 方法,该方法有一个 func 参数,当传入一个函数后,apply 方法就会把传入的函数应用于Series 的每个元素.
 
-1）创建一个 DataFrame 数据集，准备数据
+1）创建一个 DataFrame 数据集,准备数据
 
 ```python
 df = pd.DataFrame({'a': [10, 20, 30], 'b': [20, 30, 40]})
@@ -72,7 +73,7 @@ df['a'].apply(my_add, n=3)
 
 ## 3. DataFrame 的 apply 方法
 
-> DataFrame 的 apply 函数用法和 Series的用法基本一致，当传入一个函数后，apply 方法就会把传入的函数应用于 DataFrame 的行或列
+> DataFrame 的 apply 函数用法和 Series的用法基本一致,当传入一个函数后,apply 方法就会把传入的函数应用于 DataFrame 的行或列
 
 ### 3.1 按列执行
 
@@ -85,7 +86,7 @@ def sub_one(x):
     return x - 1
 ```
 
-2）针对 `df` 进行 `apply` 操作，默认按列执行
+2）针对 `df` 进行 `apply` 操作,默认按列执行
 
 ```python
 # 按列计算
@@ -96,9 +97,9 @@ df.apply(sub_one)
 
 ### 3.2 按行执行
 
-> DataFrame 的 apply 函数有一个 `axis` 参数，默认值为 0，表示按列执行；可以设置为`axis=1` ，表示按行执行
+> DataFrame 的 apply 函数有一个 `axis` 参数,默认值为 0,表示按列执行；可以设置为`axis=1` ,表示按行执行
 
-1）针对 `df` 进行 `apply` 操作，设置按行执行
+1）针对 `df` 进行 `apply` 操作,设置按行执行
 
 ```python
 # 按行计算
@@ -110,9 +111,9 @@ df.apply(sub_one, axis=1)
 ### 3.3 每一个值都执行
 
 ::: tip
-DataFrame 还有一个 applymap 函数，applymap 也有一个 func 参数接收一个函数，针对 DataFrame 每个值应用 func 指定的函数进行操作，分别返回的结果构成新的 DataFrame 对象
+DataFrame 还有一个 applymap 函数,applymap 也有一个 func 参数接收一个函数,针对 DataFrame 每个值应用 func 指定的函数进行操作,分别返回的结果构成新的 DataFrame 对象
 
-注意：applymap函数是 DataFrame 独有的，Series 没有这个方法
+注意:applymap函数是 DataFrame 独有的,Series 没有这个方法。pandas 2.1 起该方法更名为 DataFrame.map,新版本建议使用 `df.map(...)`;在 pandas 2.x 中 `df.applymap(...)` 仍可使用(会提示弃用警告),pandas 3.0 起已移除,请改用 `df.map(...)`。
 :::
 
 ```python
@@ -124,11 +125,11 @@ df.applymap(sub_one)
 
 ## 4. apply 使用案例
 
-> 接下来我们通过一个数据集 `titanic.csv`，应用 apply 函数计算缺失值的占比以及非空值占比
+> 接下来我们通过一个数据集 `titanic.csv`,应用 apply 函数计算缺失值的占比以及非空值占比
 
 ### 4.1 加载数据初步查看缺失情况
 
-1）加载`titanic.csv`数据集，通过`df.info()`函数来查看数据集基本信息，从中发现缺失值
+1）加载`titanic.csv`数据集,通过`df.info()`函数来查看数据集基本信息,从中发现缺失值
 
 ```python
 titanic = pd.read_csv('./data/titanic.csv')
@@ -139,7 +140,7 @@ titanic.info()
 
 ### 4.2 完成自定义函数
 
-通过观察发现有 4 列数据存在缺失值，age 和 deck 两列缺失值较多；此时我们就来完成几个自定义函数，分别来计算：
+通过观察发现有 4 列数据存在缺失值,age 和 deck 两列缺失值较多；此时我们就来完成几个自定义函数,分别来计算：
 
 - 缺失值总数
 - 缺失值占比
@@ -243,7 +244,7 @@ df
 
 ![chapter04-16](/data-analysis/chapter04-16.webp)
 
-2）此时我们创建一个函数，两个 series 计算求和
+2）此时我们创建一个函数,两个 series 计算求和
 
 ```python
 def add_vec(x, y):
@@ -254,7 +255,7 @@ add_vec(df['a'], df['b'])
 
 ![chapter04-17](/data-analysis/chapter04-17.webp)
 
-3）稍微修改一下函数，只加一个判断条件
+3）稍微修改一下函数,只加一个判断条件
 
 ```python
 def add_vec_2(x, y):
@@ -266,9 +267,9 @@ add_vec_2(df['a'], df['b'])
 
 ![chapter04-18](/data-analysis/chapter04-18.webp)
 
-> 上面函数中，判断条件`if x != 0` ，x是series对象，是一个向量， 但20是具体的数值，int类型的变量，是一个标量。向量和标量不能直接计算，所以出错，这个时候可以使用numpy.vectorize()将函数向量化
+> 上面函数中,判断条件`if x != 0` ,x是series对象,是一个向量, 但20是具体的数值,int类型的变量,是一个标量。向量和标量不能直接计算,所以出错,这个时候可以使用numpy.vectorize()将函数向量化
 
-4）在声明函数时，使用装饰器`@np.vectorize`，将函数向量化
+4）在声明函数时,使用装饰器`@np.vectorize`,将函数向量化
 
 ```python
 import numpy as np
@@ -288,12 +289,12 @@ add_vec_2(df['a'], df['b'])
 
 ## 6. lambda 函数
 
-> 使用 `apply` 和 `applymap` 对数据进行处理时，当处理函数比较简单的时候，没有必要创建一个函数， 可以使用lambda 表达式创建匿名函数
+> 使用 `apply` 和 `applymap` 对数据进行处理时,当处理函数比较简单的时候,没有必要创建一个函数, 可以使用lambda 表达式创建匿名函数
 
 lambda匿名函数的优点如下：
 
-- 使用 Python 写一些执行脚本时，使用 lambda 可以省去定义函数的过程，让代码更加精简
-- 对于一些抽象的，不会再别的地方再复用的函数，有时候给函数起个名字也是个难题，使用 lambda 不需要考虑命名的问题
+- 使用 Python 写一些执行脚本时,使用 lambda 可以省去定义函数的过程,让代码更加精简
+- 对于一些抽象的,不会再别的地方再复用的函数,有时候给函数起个名字也是个难题,使用 lambda 不需要考虑命名的问题
 - 使用 lambda 在某些时候让代码更容易理解
 
 1）示例：`df` 中的数据加1

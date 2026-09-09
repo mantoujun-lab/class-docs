@@ -1,8 +1,9 @@
 ---
-title: Python 数据可视化
+title: 第 5 章 Python 数据可视化
 description: 25 级计算机应用 1 班 Python 数据可视化讲义,围绕 Matplotlib、pandas、seaborn、pyecharts 四个常用绘图库,讲解从基础图表到交互式可视化的完整流程,适合课堂学习与复习参考。
 keywords: Python 数据可视化,Matplotlib,pandas 绘图,seaborn,pyecharts,echarts,统计图表,数据分析,海南省经济技术学校
 ---
+# 第 5 章 Python 数据可视化
 
 ## 栏目简介
 

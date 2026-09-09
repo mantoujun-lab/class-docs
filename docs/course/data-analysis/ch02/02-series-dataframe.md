@@ -1,8 +1,9 @@
 ---
-title: Series和DataFrame
+title: Series 和 DataFrame
 description: 本页对应「Series和DataFrame」章节的内容,围绕 pandas 数据分析展开,涵盖核心概念、代码示例与注意事项。
 keywords: pandas,Series,DataFrame,创建,字典,列表,ndarray,索引
 ---
+# Series 和 DataFrame
 
 ## 学习目标
 
@@ -18,9 +19,9 @@ Series是 pandas 中用来存储一维数据的容器。
 
 1）创建 Series 的最简单方法是传入一个Python列表
 
-- 如果传入的数据类型是统一的数字，那么最终的 dtype 类型是int64
-- 如果传入的数据类型是统一的字符串，那么最终的 dtype 类型是object
-- 如果传入的数据类型是多种类型，那么最终的 dtype 类型也是object
+- 如果传入的数据类型是统一的数字,那么最终的 dtype 类型是int64
+- 如果传入的数据类型是统一的字符串,那么最终的 dtype 类型是object
+- 如果传入的数据类型是多种类型,那么最终的 dtype 类型也是object
 
 ```python
 s = pd.Series(['banana', 42])
@@ -39,10 +40,10 @@ print(type(s))
 ![chapter02-30](/data-analysis/chapter02-30.webp)
 
 ::: tip
-注意：上面的结果中，左边显示的0，1是 Series 的行标签，默认为0，1，2，3...
+注意：上面的结果中,左边显示的0,1是 Series 的行标签,默认为0,1,2,3...
 :::
 
-2）创建 Series 时，也可以通过 index 参数来指定行标签
+2）创建 Series 时,也可以通过 index 参数来指定行标签
 
 ```python
 s = pd.Series(['smart', 18], index=['name', 'age'])
@@ -62,14 +63,14 @@ print(type(s))
 | s.size | 查看 Series 数据的个数 |
 | s.index | 获取 Series 数据的行标签 |
 | s.values | 获取 Series 数据的元素值 |
-| s.keys() | 获取 Series 数据的行标签，和 s.index 效果相同 |
+| s.keys() | 获取 Series 数据的行标签,和 s.index 效果相同 |
 | s.loc[行标签] | 根据行标签获取 Series 中的某个元素数据 |
 | s.iloc[行位置] | 根据行位置获取 Series 中的某个元素数据 |
 | s.dtypes | 查看 Series 数据元素的类型 |
 
 **示例演示**：
 
-1）加载 `scientists.csv` 数据集，并获取 `Age` 列的数据
+1）加载 `scientists.csv` 数据集,并获取 `Age` 列的数据
 
 ```python
 scientists = pd.read_csv('./data/scientists.csv')
@@ -182,13 +183,13 @@ occupation_series.describe()
 
 | 方法 | 说明 |
 | --- | --- |
-| append | 连接两个或多个Series |
+| append(已移除,改用 pd.concat) | 连接两个或多个Series |
 | corr | 计算与另一个Series的相关系数 |
 | cov | 计算与另一个Series的协方差 |
 | describe | 计算常见统计量 |
 | drop_duplicates | 返回去重之后的Series |
 | equals | 判断两个Series是否相同 |
-| get_values | 获取Series的值，作用与values属性相同 |
+| get_values | 获取Series的值,作用与values属性相同 |
 | hist | 绘制直方图 |
 | isin | Series中是否包含某些值 |
 | min | 返回最小值 |
@@ -205,7 +206,7 @@ occupation_series.describe()
 
 ### 1.3 bool 索引
 
-Series 支持 bool 索引，可以从 Series 获取 bool 索引为 True 的位置对应的数据。
+Series 支持 bool 索引,可以从 Series 获取 bool 索引为 True 的位置对应的数据。
 
 ```python
 bool_values = [False, True, True, True, False, False, False, True]
@@ -227,8 +228,8 @@ age_series[age_series>age_series.mean()]
 
 | 情况 | 说明 |
 | --- | --- |
-| Series 和 数值型数据运算 | Series 中的每个元素和数值型数据逐一运算，返回新的 Series |
-| Series 和 另一 Series 运算 | 两个 Series 中相同行标签的元素分别进行运算，若不存在相 同的行标签，计算后的结果为 NaN，最终返回新的 Series |
+| Series 和 数值型数据运算 | Series 中的每个元素和数值型数据逐一运算,返回新的 Series |
+| Series 和 另一 Series 运算 | 两个 Series 中相同行标签的元素分别进行运算,若不存在相 同的行标签,计算后的结果为 NaN,最终返回新的 Series |
 
 **Series 和 数值型数据运算**：
 
@@ -299,7 +300,7 @@ peoples
 
 ![chapter02-50](/data-analysis/chapter02-50.webp)
 
-2）创建 DataFrame 的时候可以使用colums参数指定列的顺序，也可以使用 index 参数来指定行标签
+2）创建 DataFrame 的时候可以使用colums参数指定列的顺序,也可以使用 index 参数来指定行标签
 
 ```python
 peoples = pd.DataFrame({
@@ -311,7 +312,7 @@ peoples
 
 ![chapter02-51](/data-analysis/chapter02-51.webp)
 
-3）也可以使用嵌套列表创建 DataFrame，并使用 columns 参数指定列标签，使用 index 参数来指定行标签
+3）也可以使用嵌套列表创建 DataFrame,并使用 columns 参数指定列标签,使用 index 参数来指定行标签
 
 ```python
 peoples = pd.DataFrame([
@@ -337,8 +338,8 @@ peoples
 | df.columns | 获取 DataFrame 数据的列标签 |
 | df.dtypes | 查看 DataFrame 每列数据元素的类型 |
 | df.info() | 查看 DataFrame 每列的结构 |
-| df.head(n) | 获取 DataFrame 的前 n 行数据，n 默认为 5 |
-| df.tail(n) | 获取 DataFrame 的后 n 行数据，n 默认为 5 |
+| df.head(n) | 获取 DataFrame 的前 n 行数据,n 默认为 5 |
+| df.tail(n) | 获取 DataFrame 的后 n 行数据,n 默认为 5 |
 
 1）常用属性和方法演示
 
@@ -372,7 +373,7 @@ scientists.info()
 > | object | string | 字符串类型 |
 > | int64 | int | 整形 |
 > | float64 | float | 浮点型 |
-> | datetime64 | datetime | 日期时间类型，python中需要加载 |
+> | datetime64 | datetime | 日期时间类型,python中需要加载 |
 
 ```python
 scientists.head()
@@ -410,7 +411,7 @@ scientists.describe()
 ![chapter02-58](/data-analysis/chapter02-58.webp)
 
 ::: tip
-注意：describe 方法默认只显示数值型列的统计信息，可以通过 include 参数设置显示非数值型列的统计信息
+注意：describe 方法默认只显示数值型列的统计信息,可以通过 include 参数设置显示非数值型列的统计信息
 :::
 
 ```python
@@ -422,7 +423,7 @@ scientists.describe(include=[np.object_])
 
 ### 2.3 bool 索引
 
-DataFrame 支持 bool 索引，可以从 DataFrame 获取 bool 索引为 True 的对应行的数据。
+DataFrame 支持 bool 索引,可以从 DataFrame 获取 bool 索引为 True 的对应行的数据。
 
 ```python
 bool_values = [False, True, True, True, False, False, False, True]
@@ -444,8 +445,8 @@ scientists[scientists['Age'] > scientists['Age'].mean()]
 
 | 情况 | 说明 |
 | --- | --- |
-| DataFrame 和 数值型数据运算 | DataFrame 中的每个元素和数值型数据逐一运算， 返回新的 DataFrame |
-| DataFrame 和 另一 DataFrame 运算 | 两个 DataFrame 中相同行标签和列标签的元素分 别进行运算，若不存在相同的行标签或列标签， 计算后的结果为 NaN，最终返回新的 DataFrame |
+| DataFrame 和 数值型数据运算 | DataFrame 中的每个元素和数值型数据逐一运算, 返回新的 DataFrame |
+| DataFrame 和 另一 DataFrame 运算 | 两个 DataFrame 中相同行标签和列标签的元素分 别进行运算,若不存在相同的行标签或列标签, 计算后的结果为 NaN,最终返回新的 DataFrame |
 
 **DataFrame 和 数值型数据运算**：
 
@@ -474,9 +475,9 @@ scientists + scientists[:4]
 
 ### 2.5 行标签和列表签操作
 
-#### 2.5.1 加载数据后，指定某列数据作为行标签
+#### 2.5.1 加载数据后,指定某列数据作为行标签
 
-> 加载数据文件时，如果不指定行标签，Pandas会自动加上从0开始的行标签；
+> 加载数据文件时,如果不指定行标签,Pandas会自动加上从0开始的行标签；
 >
 > 可以通过df.set_index('列名')的方法重新将指定的列数据设置为行标签
 
@@ -495,7 +496,7 @@ scientists_df
 
 ![chapter02-66](/data-analysis/chapter02-66.webp)
 
-设置行标签之后，可以通过 `reset_index` 方法重置行标签：
+设置行标签之后,可以通过 `reset_index` 方法重置行标签：
 
 ```python
 # 注意：reset_index返回的是一个新的 DataFrame
@@ -504,11 +505,11 @@ scientists_df.reset_index()
 
 ![chapter02-67](/data-analysis/chapter02-67.webp)
 
-#### 2.5.2 加载数据时，指定某列数据作为行标签
+#### 2.5.2 加载数据时,指定某列数据作为行标签
 
-> 加载数据文件的时候，可以通过通过 index_col 参数，指定使用某一列数据作为行标签，index_col 参数可以指定列名或列位置
+> 加载数据文件的时候,可以通过 index_col 参数,指定使用某一列数据作为行标签,index_col 参数可以指定列名或列位置
 
-1）加载 `scientists.csv`数据时，将 Name 列设置为行标签
+1）加载 `scientists.csv`数据时,将 Name 列设置为行标签
 
 ```python
 pd.read_csv('./data/scientists.csv', index_col='Name')
@@ -518,12 +519,12 @@ pd.read_csv('./data/scientists.csv', index_col=0)
 
 ![chapter02-68](/data-analysis/chapter02-68.webp)
 
-#### 2.5.3 加载数据后，修改行标签和列标签
+#### 2.5.3 加载数据后,修改行标签和列标签
 
 | 方式 | 说明 |
 | --- | --- |
-| df.rename(index={'原行标签名': '新行标签名', ...}, columns={'原列标签名': '新列标签名', ...}) | 修改指定的行标签和列标签，rename修改后返回新的 DataFrame |
-| df.index = ['新行标签名1', '新行标签名2', ...] df.columns = ['新列标签名1', '新列标签名2', …] | 修改行标签和列标签，直接对原 DataFrame 进行修改 |
+| df.rename(index={'原行标签名': '新行标签名', ...}, columns={'原列标签名': '新列标签名', ...}) | 修改指定的行标签和列标签,rename修改后返回新的 DataFrame |
+| df.index = ['新行标签名1', '新行标签名2', ...] df.columns = ['新列标签名1', '新列标签名2', …] | 修改行标签和列标签,直接对原 DataFrame 进行修改 |
 
 1）加载 `scientists.csv`数据集
 

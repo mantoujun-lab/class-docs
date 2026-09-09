@@ -3,6 +3,7 @@ title: pyecharts 绘图
 description: 25 级计算机应用 1 班 Python 数据可视化讲义第 5 章第 4 节,介绍 echarts 与 pyecharts 简介,以招聘网站数据分析岗位数据为案例,讲解柱状图、词云图、气泡图、饼状图等交互式图表的绘制方法。
 keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状图,数据清洗,招聘数据分析,海南省经济技术学校
 ---
+# pyecharts 绘图
 
 ## 学习目标
 

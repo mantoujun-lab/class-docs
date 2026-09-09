@@ -3,6 +3,7 @@ title: Matplotlib 绘图
 description: 25 级计算机应用 1 班 Python 数据可视化讲义第 5 章第 1 节,介绍数据可视化概念、Python 常用绘图库对比,以及使用 Matplotlib 进行状态接口与面向对象绘图、单变量与多变量统计图绘制的方法。
 keywords: Matplotlib,Python 绘图,数据可视化,Anscombe 数据集,tips 数据集,直方图,散点图,子图,坐标系,海南省经济技术学校
 ---
+# Matplotlib 绘图
 
 ## 学习目标
 

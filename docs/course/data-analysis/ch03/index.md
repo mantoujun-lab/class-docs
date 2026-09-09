@@ -1,8 +1,9 @@
 ---
-title: pandas 数据清洗
+title: 第 3 章 pandas 数据清洗
 description: pandas 数据清洗栏目,涵盖数据组合(concat/merge/join)、缺失值处理、数据整理与 pandas 数据类型,适合课堂复习。
 keywords: pandas,数据清洗,数据组合,缺失值,数据整理,数据类型,concat,merge,join
 ---
+# 第 3 章 pandas 数据清洗
 
 ## 栏目简介
 
@@ -21,8 +22,8 @@ keywords: pandas,数据清洗,数据组合,缺失值,数据整理,数据类型,c
 
 - 按章节顺序阅读,前三节侧重操作,第四节侧重概念。
 - 每段代码都可在本地 Python 环境中复现,建议使用 VS Code 或 Jupyter Notebook 分块运行。
-- 数据文件与图片资源位于仓库 `docs/public/data-analysis/` 目录下,代码示例中的相对路径仅供参考。
+- 文中截图位于仓库 `docs/public/data-analysis/` 目录;代码示例会通过 `./data/*.csv` 等相对路径读取数据文件,这些数据未随本站发布,需从课程讲义资源中获取后再运行。
 
 ---
 
-> 📌 本栏目内容由课堂讲义整理而来,代码示例可直接复制运行,如发现错误欢迎按 [参与共建](/guide/contributing) 流程反馈。
+> 📌 本栏目内容由课堂讲义整理而来,代码示例在备好所需数据文件后可直接运行,如发现错误欢迎按 [参与共建](/guide/contributing) 流程反馈。
