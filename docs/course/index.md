@@ -13,6 +13,7 @@ keywords: 课程笔记,计算机应用,学科知识,计算机基础,Office,编�
 | 页面 | 内容说明 |
 | --- | --- |
 | [Python pandas 题型总结](/course/python-pandas/) | 围绕二手房数据,使用 pandas 完成数据预览、清洗与打标签等常见操作 |
+| [数据分析讲义](/course/data-analysis/) | 6 章 22 节,从开发环境到 pandas、数据清洗、可视化与综合案例,覆盖数据分析全流程 |
 
 ## 待补充
 
