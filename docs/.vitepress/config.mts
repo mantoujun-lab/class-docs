@@ -154,6 +154,70 @@ export default defineConfig({
                 { text: '数据清洗', link: '/course/python-pandas/cleaning' },
                 { text: '数据打标签', link: '/course/python-pandas/labeling' }
               ]
+            },
+            {
+              text: '数据分析讲义',
+              items: [
+                { text: '栏目概览', link: '/course/data-analysis/' },
+                {
+                  text: '第 1 章 Python 数据分析简介',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch01/' },
+                    { text: '数据分析简介', link: '/course/data-analysis/ch01/01-introduction' },
+                    { text: '开发环境搭建', link: '/course/data-analysis/ch01/02-env-setup' }
+                  ]
+                },
+                {
+                  text: '第 2 章 pandas 快速入门',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch02/' },
+                    { text: 'pandas 快速入门', link: '/course/data-analysis/ch02/01-pandas-quickstart' },
+                    { text: 'Series 和 DataFrame', link: '/course/data-analysis/ch02/02-series-dataframe' },
+                    { text: 'DataFrame 增删改', link: '/course/data-analysis/ch02/03-dataframe-crud' },
+                    { text: 'DataFrame 查询', link: '/course/data-analysis/ch02/04-dataframe-query' },
+                    { text: '租房数据分析示例', link: '/course/data-analysis/ch02/05-rent-analysis' }
+                  ]
+                },
+                {
+                  text: '第 3 章 pandas 数据清洗',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch03/' },
+                    { text: '数据组合', link: '/course/data-analysis/ch03/01-data-combine' },
+                    { text: '缺失值处理', link: '/course/data-analysis/ch03/02-missing-value' },
+                    { text: '数据整理', link: '/course/data-analysis/ch03/03-data-reshape' },
+                    { text: 'pandas 数据类型', link: '/course/data-analysis/ch03/04-pandas-types' }
+                  ]
+                },
+                {
+                  text: '第 4 章 pandas 数据处理',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch04/' },
+                    { text: 'apply 自定义函数', link: '/course/data-analysis/ch04/01-apply' },
+                    { text: '数据分组操作', link: '/course/data-analysis/ch04/02-groupby' },
+                    { text: '数据透视表', link: '/course/data-analysis/ch04/03-pivot-table' },
+                    { text: 'datetime 数据类型', link: '/course/data-analysis/ch04/04-datetime' }
+                  ]
+                },
+                {
+                  text: '第 5 章 Python 数据可视化',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch05/' },
+                    { text: 'Matplotlib 绘图', link: '/course/data-analysis/ch05/01-matplotlib' },
+                    { text: 'pandas 绘图', link: '/course/data-analysis/ch05/02-pandas-plot' },
+                    { text: 'seaborn 绘图', link: '/course/data-analysis/ch05/03-seaborn' },
+                    { text: 'pyecharts 绘图', link: '/course/data-analysis/ch05/04-pyecharts' }
+                  ]
+                },
+                {
+                  text: '第 6 章 pandas 综合案例',
+                  items: [
+                    { text: '章节概览', link: '/course/data-analysis/ch06/' },
+                    { text: 'Appstore 数据分析', link: '/course/data-analysis/ch06/01-appstore' },
+                    { text: '优衣库销售数据分析', link: '/course/data-analysis/ch06/02-uniqlo' },
+                    { text: 'RFM 用户分群', link: '/course/data-analysis/ch06/03-rfm' }
+                  ]
+                }
+              ]
             }
           ]
         }
