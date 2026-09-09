@@ -100,9 +100,9 @@ bill_board.head()
 1）对上面数据的周评分进行处理，转换成长数据
 
 ```python
-billboard_long = pd.melt(billboard, 
-                         id_vars=['year', 'artist', 'track', 'time', 'date.entered'], 
-                         var_name='week', 
+billboard_long = pd.melt(billboard,
+                         id_vars=['year', 'artist', 'track', 'time', 'date.entered'],
+                         var_name='week',
                          value_name='rating')
 billboard_long
 ```
@@ -153,7 +153,7 @@ billboard_songs
 
 ```python
 # 原长数据集与歌曲信息表进行merge合并，基于指定的的字段，这样就歌曲id放到了长数据集中
-new_billboard_long = billboard_long.merge(billboard_songs, 
+new_billboard_long = billboard_long.merge(billboard_songs,
                                           on=['year', 'artist', 'track', 'time', 'date.entered'])
 new_billboard_long
 ```
@@ -308,7 +308,7 @@ movies.head()
 2）去除无关字段
 
 ```python
-movie_actors = movies[['movie_title', 'actor_1_name', 'actor_2_name', 'actor_3_name', 
+movie_actors = movies[['movie_title', 'actor_1_name', 'actor_2_name', 'actor_3_name',
                        'actor_1_facebook_likes', 'actor_2_facebook_likes', 'actor_3_facebook_likes']]
 movie_actors.head()
 ```
@@ -330,7 +330,7 @@ movie_actors.head()
 1）先执行下面的代码，观看输出结果：
 
 ```python
-movie_actors_tidy = pd.wide_to_long(movie_actors, 
+movie_actors_tidy = pd.wide_to_long(movie_actors,
                                     stubnames=['actor_name', 'actor_facebook_likes'],
                                     i=['movie_title'],
                                     j='actor_num',

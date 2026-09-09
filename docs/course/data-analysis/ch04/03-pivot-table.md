@@ -222,9 +222,9 @@ month_degree_count.unstack()
 **透视表实现**：
 
 ```python
-month_degree_count = member_df.pivot_table(index='注册年月', 
-                                           columns='会员等级', 
-                                           values='会员卡号', 
+month_degree_count = member_df.pivot_table(index='注册年月',
+                                           columns='会员等级',
+                                           values='会员卡号',
                                            aggfunc='count')
 month_degree_count
 ```
@@ -365,9 +365,9 @@ from_data.head()
 **透视表实现**：
 
 ```python
-from_data = member_df.pivot_table(index='注册年月', 
-                                  columns=['会员来源'], 
-                                  values='会员卡号', 
+from_data = member_df.pivot_table(index='注册年月',
+                                  columns=['会员来源'],
+                                  values='会员卡号',
                                   aggfunc='count')
 from_data.head()
 ```
@@ -415,7 +415,7 @@ store_info[['店铺代码', '地区编码']]
 2）将会员信息数据和门店数据进行 `merge` 操作
 
 ```python
-country_info = pd.merge(member_df, store_info[['店铺代码', '地区编码']], 
+country_info = pd.merge(member_df, store_info[['店铺代码', '地区编码']],
                         left_on='所属店铺编码', right_on='店铺代码')
 country_info.head()
 ```
@@ -503,10 +503,10 @@ all_orders.head()
 2）按照地区和年月统计会员订单数
 
 ```python
-member_orders = all_orders.pivot_table(values='会员订单数', 
-                                       index='地区代码', 
-                                       columns='年月', 
-                                       aggfunc='sum', 
+member_orders = all_orders.pivot_table(values='会员订单数',
+                                       index='地区代码',
+                                       columns='年月',
+                                       aggfunc='sum',
                                        margins='all')
 member_orders
 ```
@@ -517,9 +517,9 @@ member_orders
 
 ```python
 country_sales = all_orders.pivot_table(values='全部订单数',
-                                       index='地区代码', 
-                                       columns='年月', 
-                                       aggfunc='sum', 
+                                       index='地区代码',
+                                       columns='年月',
+                                       aggfunc='sum',
                                        margins='all')
 country_sales
 ```
@@ -610,9 +610,9 @@ ret
 5）按照地区和年月统计会员消费数量
 
 ```python
-consume_count = ret.pivot_table(values='消费数量', 
-                                index='地区编码', 
-                                columns='年月', 
+consume_count = ret.pivot_table(values='消费数量',
+                                index='地区编码',
+                                columns='年月',
                                 aggfunc='sum')
 consume_count
 ```
@@ -622,9 +622,9 @@ consume_count
 6）按照地区和年月统计会员订单数
 
 ```python
-order_count = ret.pivot_table(values='订单号', 
-                              index='地区编码', 
-                              columns='年月', 
+order_count = ret.pivot_table(values='订单号',
+                              index='地区编码',
+                              columns='年月',
                               aggfunc='nunique')
 order_count
 ```
@@ -681,8 +681,8 @@ order_data
 ![img](/data-analysis/chapter04-111.webp)
 
 ```python
-consume_count = order_data.pivot_table(values='年月', 
-                                       index=['地区编码', '卡号'], 
+consume_count = order_data.pivot_table(values='年月',
+                                       index=['地区编码', '卡号'],
                                        aggfunc='count').reset_index()
 consume_count
 ```
@@ -708,7 +708,7 @@ consume_count
 
 ```python
 depart_data = consume_count.pivot_table(
-    values=['消费次数', '是否复购'], 
+    values=['消费次数', '是否复购'],
     index='地区编码', aggfunc={'消费次数': 'count', '是否复购': 'sum'})
 depart_data.columns = ['复购人数', '消费人数']
 depart_data

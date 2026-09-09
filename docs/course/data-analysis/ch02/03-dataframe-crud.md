@@ -37,7 +37,7 @@ scientists
 
 ```python
 # 准备新行数据
-new_series = pd.Series(['LuoGeng Hua', '1910-11-12', '1985-06-12', 75, 'Mathematician'], 
+new_series = pd.Series(['LuoGeng Hua', '1910-11-12', '1985-06-12', 75, 'Mathematician'],
                        index=['Name', 'Born', 'Died', 'Age', 'Occupation'])
 scientists.append(new_series, ignore_index=True)
 ```
@@ -128,10 +128,10 @@ scientists.drop([1, 3])
 1）示例：给 `scientists` 数据增加一个 `Country` 列
 
 ```python
-scientists['Country'] = ['England', 'England', 'England', 'French', 
+scientists['Country'] = ['England', 'England', 'England', 'French',
                          'America', 'England', 'England', 'Germany']
 或
-scientists.loc[:, 'Country'] = ['England', 'England', 'England', 'French', 
+scientists.loc[:, 'Country'] = ['England', 'England', 'England', 'French',
                                 'America', 'England', 'England', 'Germany']
 scientists
 ```
@@ -141,11 +141,11 @@ scientists
 3）示例：修改 `scientists` 数据中 `Country` 列的数据
 
 ```python
-scientists['Country'] = ['england', 'england', 'england', 'french', 
+scientists['Country'] = ['england', 'england', 'england', 'french',
                          'america', 'england', 'england', 'germany']
 
 或
-scientists.loc[:, 'Country'] = ['england', 'england', 'england', 'french', 
+scientists.loc[:, 'Country'] = ['england', 'england', 'england', 'french',
                                 'america', 'england', 'england', 'germany']
 scientists
 ```
@@ -218,7 +218,7 @@ scientists.to_csv('./data/scientists_df_noindex.csv', index=False)
 注意：根据anaconda的版本不同，pandas读写excel有时需要额外安装`xlwt`、`xlrd`、`openpyxl`三个包
 
 ```shell
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple xlwt 
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple xlwt
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple openpyxl
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple xlrd
 ```

@@ -115,9 +115,9 @@ uniqlo.groupby('product')['quant'].sum().sort_values(ascending=False)
 
 ```python
 # 进一步拆解，按城市拆解销量
-uniqlo.pivot_table(values='quant', 
-                   index='product', 
-                   columns='city', 
+uniqlo.pivot_table(values='quant',
+                   index='product',
+                   columns='city',
                    aggfunc='sum').sort_values('上海', ascending=False)
 ```
 
@@ -125,9 +125,9 @@ uniqlo.pivot_table(values='quant',
 
 ```python
 # 对城市拆解后，再进一步按线上线下拆解
-uniqlo.pivot_table(values='quant', 
-                   index='product', 
-                   columns=['city', 'channel'], 
+uniqlo.pivot_table(values='quant',
+                   index='product',
+                   columns=['city', 'channel'],
                    aggfunc='sum')
 ```
 
@@ -148,7 +148,7 @@ uniqlo.groupby('channel').order.sum()
 
 ```python
 # 进一步按城市拆解
-uniqlo.pivot_table(index='city', columns='channel', 
+uniqlo.pivot_table(index='city', columns='channel',
                    values='order', aggfunc='sum').sort_values('线上', ascending=False)
 ```
 
@@ -158,7 +158,7 @@ uniqlo.pivot_table(index='city', columns='channel',
 
 ```python
 # 进一步计算线上线下销售额
-uniqlo.pivot_table(values='quant', index='city', 
+uniqlo.pivot_table(values='quant', index='city',
                    columns='channel', aggfunc='sum')
 ```
 
@@ -182,7 +182,7 @@ uniqlo.wkd_ind.value_counts()
 2）通过数据透视表，查看不同城市周间、周末销量情况
 
 ```python
-wkd_sales = uniqlo.pivot_table(values='quant', index='wkd_ind', 
+wkd_sales = uniqlo.pivot_table(values='quant', index='wkd_ind',
                                columns='city', aggfunc='sum')
 wkd_sales
 ```

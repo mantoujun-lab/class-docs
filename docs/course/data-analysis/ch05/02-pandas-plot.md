@@ -60,8 +60,8 @@ reviews.head()
 
 ```python
 # 准备绘图参数
-text_kwargs = dict(figsize=(16, 8), 
-                   fontsize=16, 
+text_kwargs = dict(figsize=(16, 8),
+                   fontsize=16,
                    color= ['b','orange','g','r','purple','brown','pink','gray','cyan','y'])
 # 获取葡萄酒产量最多的10个产区,并绘制柱状图
 reviews['province'].value_counts().head(10).plot.bar(**text_kwargs)
@@ -212,7 +212,7 @@ reviews['province'].value_counts().head(10).plot.pie(figsize=(20, 8))
 > 简单的两个变量可视化图形是散点图,散点图中的一个点,可以表示两个变量
 
 ```python
-reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price', 
+reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price',
                                                          y='points')
 ```
 
@@ -221,9 +221,9 @@ reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price',
 调整图形大小,字体大小,由于pandas的绘图功能是对Matplotlib绘图功能的封装,所以很多参数pandas 和 matplotlib都一样：
 
 ```python
-reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price', 
-                                                         y='points', 
-                                                         figsize=(20, 8), 
+reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price',
+                                                         y='points',
+                                                         figsize=(20, 8),
                                                          fontsize=16)
 ```
 
@@ -234,10 +234,10 @@ reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price',
 ```python
 import matplotlib.pyplot as plt
 fig, axes = plt.subplots(ncols=1, figsize=(20, 10))
-reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price', 
-                                                         y='points', 
-                                                         figsize=(20, 8), 
-                                                         fontsize=16, 
+reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price',
+                                                         y='points',
+                                                         figsize=(20, 8),
+                                                         fontsize=16,
                                                          ax=axes)
 axes.set_xlabel('price', fontdict={'fontsize': 16})
 axes.set_ylabel('points', fontdict={'fontsize': 16})
@@ -250,9 +250,9 @@ axes.set_ylabel('points', fontdict={'fontsize': 16})
 请注意,我们必须对数据进行采样,从所有数据中抽取100条数据,如果将全部数据（15万条）都绘制到散点图上,会有很多点重叠在一起,不便于观察：
 
 ```python
-reviews[reviews['price'] < 100].plot.scatter(x='price', 
-                                             y='points', 
-                                             figsize=(20, 8), 
+reviews[reviews['price'] < 100].plot.scatter(x='price',
+                                             y='points',
+                                             figsize=(20, 8),
                                              fontsize=16)
 ```
 
@@ -271,7 +271,7 @@ reviews[reviews['price'] < 100].plot.scatter(x='price',
 > hexplot 将数据点聚合为六边形,然后根据其内的值为这些六边形上色
 
 ```python
-reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points', 
+reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points',
                                             figsize=(16, 8), gridsize=15)
 ```
 
@@ -281,7 +281,7 @@ reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points',
 
 ```python
 fig, axes = plt.subplots(ncols=1, figsize=(16, 8))
-reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points', 
+reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points',
                                             figsize=(16, 8), gridsize=15, ax=axes)
 ```
 
@@ -317,10 +317,10 @@ reviews.groupby('variety')['country'].count().sort_values(ascending=False)
 
 ```python
 # 取出最常见的 5 种酒
-top_5_wine = reviews[reviews.variety.isin(['Chardonnay', 
-                                           'Pinot Noir', 
-                                           'Cabernet Sauvignon', 
-                                           'Red Blend', 
+top_5_wine = reviews[reviews.variety.isin(['Chardonnay',
+                                           'Pinot Noir',
+                                           'Cabernet Sauvignon',
+                                           'Red Blend',
                                            'Bordeaux-style Red Blend'])]
 top_5_wine
 ```
@@ -330,9 +330,9 @@ top_5_wine
 3）通过透视表找到每种葡萄酒中,不同评分的数量
 
 ```python
-wine_counts = top_5_wine.pivot_table(values='country', 
-                                     index='points', 
-                                     columns='variety', 
+wine_counts = top_5_wine.pivot_table(values='country',
+                                     index='points',
+                                     columns='variety',
                                      aggfunc='count')
 wine_counts
 ```

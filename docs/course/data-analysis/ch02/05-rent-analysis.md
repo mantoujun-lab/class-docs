@@ -33,8 +33,8 @@ house_data.columns
 3）重新设置  `house_data` 数据的列标签
 
 ```python
-house_data.columns = ['district', 'address', 'title', 'house_type', 'area', 
-                      'price', 'floor', 'build_time', 'direction', 'update_time', 
+house_data.columns = ['district', 'address', 'title', 'house_type', 'area',
+                      'price', 'floor', 'build_time', 'direction', 'update_time',
                       'view_num', 'extra_info', 'link']
 house_data.head()
 ```

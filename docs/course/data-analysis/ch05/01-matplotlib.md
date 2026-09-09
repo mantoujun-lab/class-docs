@@ -290,7 +290,7 @@ tips
 scatter_plot = plt.figure()
 axes1 = scatter_plot.add_subplot(1, 1, 1)
 # 绘制散点图
-scatter = axes1.scatter(x=tips['total_bill'], y=tips['tip'], 
+scatter = axes1.scatter(x=tips['total_bill'], y=tips['tip'],
               s=tips['size']*10, c=tips['sex_color'], alpha=0.5)
 
 # 设置 x轴标题、y轴标题、坐标系的标题

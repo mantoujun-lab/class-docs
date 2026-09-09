@@ -208,7 +208,7 @@ import seaborn as sns
 %matplotlib inline
 
 # app 评分关系
-# height：关键字来控制图片高度 
+# height：关键字来控制图片高度
 # aspect：控制宽高比例
 sns.relplot(x='prime_genre', y='user_rating', kind='line', data=app, height=5, aspect=3)
 # 将 x 轴文字旋转45度
@@ -216,7 +216,7 @@ plt.xticks(
     rotation=45,
     horizontalalignment='right',
     fontweight='light',
-    fontsize='x-large'  
+    fontsize='x-large'
 )
 ```
 

@@ -294,7 +294,7 @@ msno.matrix(_sorted)
 
 ```python
 # 复制一份数据
-train_cp = train.copy() 
+train_cp = train.copy()
 # 对Age列进行处理，空值就删除整行数据
 train_cp.dropna(subset=['Age'], how='any', inplace=True)
 # 输出Age列缺失值的总数
@@ -321,7 +321,7 @@ df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 
 ```python
 # 复制一份数据
-train_cp = train.copy() 
+train_cp = train.copy()
 # 对Age列进行处理，空值就删除整行数据
 train_cp.drop(['Age'], axis=1, inplace=True)
 # 图形化缺失值情况

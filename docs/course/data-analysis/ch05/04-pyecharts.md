@@ -111,10 +111,10 @@ from pyecharts.charts import WordCloud
 wc = (
     WordCloud()# 创建词云图对象
     .add(series_name='哪些公司在招聘数据分析程序员', # 添加标题
-         data_pair=list(zip(company_list.index.tolist(),company_list.values.tolist())), 
+         data_pair=list(zip(company_list.index.tolist(),company_list.values.tolist())),
          word_size_range=[6, 40]) # 指定文字大小,注意如果字体太大可能显示不全
     .set_global_opts( # 设置全局参数：标题\字号
-        title_opts=opts.TitleOpts(title='哪些公司在招聘数据分析程序员', 
+        title_opts=opts.TitleOpts(title='哪些公司在招聘数据分析程序员',
                                   title_textstyle_opts=opts.TextStyleOpts(font_size=23))
     )
 )

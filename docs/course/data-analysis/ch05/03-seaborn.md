@@ -196,7 +196,7 @@ kde_joint = sns.jointplot(x='total_bill', y='tip', data=tips, shade=True, kind='
 > 条形图也可以用于展现多个变量,`barplot` 默认会计算平均值
 
 ```python
-ax = sns.barplot(x='time', y='total_bill', data=tips) 
+ax = sns.barplot(x='time', y='total_bill', data=tips)
 ax.set_title('Bar plot of average total bill for time of day')
 ax.set_xlabel('Time of day')
 ax.set_ylabel('Average total bill')
@@ -280,7 +280,7 @@ ax.set_ylabel('Total Bill')
 其它绘图函数中也存在`hue`参数：
 
 ```python
-scatter = sns.lmplot(x='total_bill', y='tip', 
+scatter = sns.lmplot(x='total_bill', y='tip',
                      data=tips, hue='sex', fit_reg=False)
 ```
 
@@ -301,7 +301,7 @@ fig = sns.pairplot(tips, hue='sex')
 在 seaborn 中的`lmplot`,可以通过`scatter_kws`参数来控制散点图点的大小：
 
 ```python
-scatter = sns.lmplot(x='total_bill', y='tip', data=tips, 
+scatter = sns.lmplot(x='total_bill', y='tip', data=tips,
                      fit_reg=False, hue='sex', markers=['o','x'])
 ```
 
@@ -317,7 +317,7 @@ scatter = sns.lmplot(x='total_bill', y='tip', data=tips,
 anscombe = sns.load_dataset('anscombe')
 # col：用于指定分面变量 这里指定 'dataset' 列中,每个取值创建一张散点图
 # col_wrap：用于指定绘制的图形有几列
-anscombe_plot = sns.lmplot(x = 'x', y='y', data=anscombe, 
+anscombe_plot = sns.lmplot(x = 'x', y='y', data=anscombe,
                            fit_reg=False, col='dataset', col_wrap=2)
 ```
 
@@ -349,7 +349,7 @@ facet.add_legend()
 相同的效果也可以使用 seaborn 的 `lmplot` 实现：
 
 ```python
-fig = sns.lmplot(x='total_bill', y='tip', data=tips, 
+fig = sns.lmplot(x='total_bill', y='tip', data=tips,
                  fit_reg=False, hue='sex', col='day', col_wrap=2)
 ```
 
