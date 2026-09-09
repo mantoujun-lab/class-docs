@@ -85,13 +85,13 @@ class-docs/
 ├── .gitignore
 ├── LICENSE
 ├── package.json
-├── pnpm-lock.yaml
+├── package-lock.json
 └── README.md
 ```
 
 ### 本地构建
 
-在开始之前，请确保你的电脑上已经安装了 **Node.js 24 LTS** 或更高版本，以及 **pnpm** 包管理器。
+在开始之前，请确保你的电脑上已经安装了 **Node.js 24 LTS** 或更高版本（内置 [**npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) 包管理器）。
 
 ```bash
 # 克隆仓库
@@ -101,17 +101,17 @@ gh repo clone mantoujun-lab/class-docs                      # GitHub CLI
 # 进入项目目录
 cd class-docs
 
-# 安装依赖（推荐使用 pnpm）
-pnpm install
+# 安装依赖
+npm install
 
 # 启动本地开发服务器
-pnpm docs:dev
+npm run docs:dev
 
 # 构建生产版本
-pnpm docs:build
+npm run docs:build
 
 # 本地预览构建产物
-pnpm docs:preview
+npm run docs:preview
 ```
 
 启动开发服务器后，打开浏览器访问终端提示的本地地址（默认 `http://localhost:5173`）即可预览文档站。
