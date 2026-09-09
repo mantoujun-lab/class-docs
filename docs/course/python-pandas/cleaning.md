@@ -2,6 +2,12 @@
 title: 数据清洗
 description: Python pandas 题型第 2 至第 6 题:围绕二手房数据,使用 pandas 完成空值过滤、异常值剔除、字段规范化等清洗操作,文件名按删除条数动态命名。
 keywords: pandas,数据清洗,布尔索引,dropna,正则,Python 题型,二手房
+prev:
+  text: 数据预览
+  link: /course/python-pandas/preview
+next:
+  text: 数据打标签
+  link: /course/python-pandas/labeling
 ---
 
 # 数据清洗
@@ -18,6 +24,13 @@ house_module.csv
 ```
 
 > 数字 `2`、`480`、`625`、`8252`、`*` 只是示例,实际跑出来的数字取决于数据版本。
+
+## 前置知识
+
+- 已完成 [数据预览](/course/python-pandas/preview),熟悉 `read_csv` 与 `DataFrame` 基本概念。
+- 会写简单的判断条件(如 `df['x'] > 0`),并理解布尔运算的优先级。
+- 对正则表达式有基本认识(`re.match` / `re.search`、`^`、`\d`、`+`、`()`),够看懂题 4 中的 `standardize_layout` 函数。
+- 理解「变量名指向同一块内存」:对 `df` 做修改会直接改动原数据,因此题 4 用 `df.copy()` 备份原表。
 
 ## 题 2:清洗「面积」字段
 
@@ -233,6 +246,12 @@ df.to_csv(csv_path, index=False, encoding='utf-8-sig')
 | 题 4 | 正则没有同时考虑 `室/房间/房/卧`;改完行数没考虑空值 |
 | 题 5 | 用 `dropna()` 不带 `subset`,会一并删除其他空列 |
 | 题 6 | 误以为 NaN 也算 `>= 20` 而忽略空值剔除 |
+
+## 学完本页之后
+
+- 已经完成 5 步清洗链,得到最终数据 `cleaned_data_c5_*.csv`。
+- 进入 [数据打标签](/course/python-pandas/labeling),学习 `groupby` 与 `apply` 如何给每行打标签。
+- 也可以回 [栏目概览](/course/python-pandas/) 查看整体学习路径。
 
 ---
 
