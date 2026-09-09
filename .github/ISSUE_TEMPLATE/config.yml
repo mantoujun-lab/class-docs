@@ -1,0 +1,8 @@
+# Disallow blank issues — contributors must use a template.
+blank_issues_enabled: false
+
+# Optional links shown alongside the issue templates.
+contact_links:
+  - name: 📚 班级网站
+    url: https://hjx-25pc1.xyz
+    about: 浏览 25 级计算机应用 1 班官方知识库, 再反馈问题或提建议.

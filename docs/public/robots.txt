@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# AI 抓取机器人 (允许用于索引,提升 LLM 推荐可见度)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+# 站点地图
+Sitemap: https://hjx-25pc1.xyz/sitemap.xml
