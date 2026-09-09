@@ -2,11 +2,20 @@
 title: 数据打标签
 description: Python pandas 题型第 7、8 题与两组标注任务:基于二手房数据,按区均价和房源数量分别为每套房和每个市区打上标签,使用 groupby、apply、map 等核心操作。
 keywords: pandas,groupby,apply,map,数据标注,价格区间,区域热门度,Python 题型
+prev:
+  text: 数据清洗
+  link: /course/python-pandas/cleaning
 ---
 
 # 数据打标签
 
 本页汇总 **题 7、题 8 以及两组标注任务**,核心思路是「按某个字段分组 → 聚合 → 给每一行贴上新标签」。注意:从题 7 开始,读取的数据重新切回 **原始数据 `house_module2.csv`**,而不是前几题的清洗结果。
+
+## 前置知识
+
+- 已完成 [数据预览](/course/python-pandas/preview) 与 [数据清洗](/course/python-pandas/cleaning),熟悉 `read_csv`、布尔索引与字段规范化。
+- 对 `groupby` 有基本认识:`groupby('列')['列'].聚合函数()` 会得到按「列」分组的聚合结果。
+- 理解 `apply(func, axis=1)` 中 `axis=1` 的含义——表示「逐行调用函数」。
 
 ## 整体流程一览
 
@@ -18,7 +27,11 @@ house_module2.csv
   └─ 标注2 ─→ house_module2_marked_task2.csv
 ```
 
-> 标注 1、标注 2 的代码与题 7、题 8 几乎一致,只是变量命名和输出文件不同,放在本页统一对照。
+::: warning 两份数据要分清
+题 1 至题 6 操作的是 `house_module.csv`(并产生 `cleaned_data_c1_*.csv` 至 `cleaned_data_c5_*.csv` 的中间文件);题 7、题 8 与标注任务读取的是另一份原始数据 `house_module2.csv`,**不要用 `cleaned_data_c5_*.csv` 来跑后面的题目**。
+:::
+
+> 标注 1、标注 2 的核心思路与题 7、题 8 完全一致,只是输出文件与变量命名略有差异;详细对照见后文「标注任务」一节。
 
 ## 题 7:价格区间标签
 
@@ -128,66 +141,39 @@ df.to_csv('area_popularity_mark.csv', index=False, encoding='utf-8-sig')
 - `Series.to_dict()`:把「键 → 值」转成 Python 字典,常配合 `.map()` 使用。
 - `df['列'].map(字典)`:用字典查表,得到新的一列;查不到时返回 `NaN`。
 
-## 标注任务 1:重复题 7 的思路
+## 标注任务 1 与标注任务 2
+
+> 标注 1 与题 7、标注 2 与题 8 思路完全一致,只是输出文件名与变量命名略有差别。把代码原样重复贴一遍会显得冗长,因此这里只列出 **与原题的关键差异**,完整代码请参考对应题目后,按差异处修改即可。
+
+### 标注任务 1:重复题 7 的思路
 
 **目标**:在 `house_module2.csv` 上重新做一遍「价格区间」打标签,输出 `house_module2_marked_task1.csv`。
 
-```python
-import pandas as pd
+**与题 7 的差异**:
 
-df = pd.read_csv('house_module2.csv')
+| 差异点 | 题 7 | 标注任务 1 |
+| --- | --- | --- |
+| 输出文件名 | `price_range_mark.csv` | `house_module2_marked_task1.csv` |
+| `if` 分支写法 | 末尾直接 `return '高端型'` | 显式写 `else: return '高端型'`,语义更清晰 |
 
-district_avg_price = df.groupby('市区')['价格(万元)'].mean()
+实现思路与题 7 一致:**`groupby('市区')['价格(万元)'].mean()` 求各区均价 → 自定义函数 `label_price_range` 逐行判断 → `df.apply(..., axis=1)` 生成新列 → 写出 CSV**。
 
-def label_price_range(row):
-    avg_count = district_avg_price[row['市区']]
-    price = row['价格(万元)']
-    if price < avg_count * 0.7:
-        return '经济型'
-    elif price <= avg_count * 1.3:
-        return '中档型'
-    else:
-        return '高端型'
-
-df['价格区间'] = df.apply(label_price_range, axis=1)
-df.to_csv('house_module2_marked_task1.csv', index=False, encoding='utf-8-sig')
-```
-
-### 与题 7 的差异
-
-- 输出文件名不同(`house_module2_marked_task1.csv`)。
-- 最后的 `else` 显式写了 `return '高端型'`,语义上更清晰。
-
-## 标注任务 2:重复题 8 的思路
+### 标注任务 2:重复题 8 的思路
 
 **目标**:在 `house_module2.csv` 上重新做一遍「区域热门度」打标签,输出 `house_module2_marked_task2.csv`。
 
-```python
-import pandas as pd
+**与题 8 的差异**:
 
-df = pd.read_csv('house_module2.csv')
+| 差异点 | 题 8 | 标注任务 2 |
+| --- | --- | --- |
+| 输出文件名 | `area_popularity_mark.csv` | `house_module2_marked_task2.csv` |
+| `if` 分支写法 | 末尾直接 `return '低热门'` | 显式写 `else: return '低热门'`,逻辑等价但更易读 |
 
-district_counts = df['市区'].value_counts()
+实现思路与题 8 一致:**`value_counts()` 统计各区房源数 → 自定义函数 `classify_hot_level` 打标签 → `Series.to_dict()` 转字典 → `df['市区'].map(字典)` 给每行查表 → 写出 CSV**。
 
-avg_count = district_counts.mean()
-
-def classify_hot_level(count):
-    if count > avg_count * 1.2:
-        return '高热门'
-    elif count < avg_count * 0.8:
-        return '中热门'
-    else:
-        return '低热门'
-
-hot_level_map = district_counts.apply(classify_hot_level).to_dict()
-df['区域热门度'] = df['市区'].map(hot_level_map)
-df.to_csv('house_module2_marked_task2.csv', index=False, encoding='utf-8-sig')
-```
-
-### 与题 8 的差异
-
-- 同样补上了 `else` 分支,逻辑等价但更易读。
-- 输出文件名不同(`house_module2_marked_task2.csv`)。
+::: tip 动手练一练
+学到这里,建议打开编辑器,把题 7 的代码复制一份,按「标注任务 1 与题 7 的差异」表改两处,独立运行一遍并核对输出。这样比直接看答案印象更深,也更容易发现「`else` 漏写」「文件名前缀打错」之类的细节错误。
+:::
 
 ## 题 7 vs 题 8 对照
 
@@ -208,6 +194,12 @@ df.to_csv('house_module2_marked_task2.csv', index=False, encoding='utf-8-sig')
 | 题 8 | 直接把 `df['市区'].apply(...)` 喂给自定义函数,导致函数拿到的是「整行」而不是「计数」 |
 | 题 8 | 没注意阈值方向,把 `>` 与 `<` 写反 |
 | 标注 1/2 | 复制题 7/8 时漏掉 `else`,逻辑分支退化 |
+
+## 学完本页之后
+
+- 已掌握「按字段分组 → 聚合 → 打标签」的完整套路,可以套用到用户分群、商品分级、活动打分等场景。
+- 想继续延伸,可结合 `numpy`、`matplotlib` 对标注结果做柱状图、饼图等可视化。
+- 也欢迎回 [栏目概览](/course/python-pandas/) 查看其他待补充方向。
 
 ---
 

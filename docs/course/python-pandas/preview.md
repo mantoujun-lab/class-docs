@@ -2,11 +2,23 @@
 title: 数据预览
 description: Python pandas 题型第 1 题:使用 read_csv 读取二手房房源 CSV,并用 head(10) 打印前 10 行进行预览,熟悉 DataFrame 的基本读取与展示。
 keywords: pandas,read_csv,head,DataFrame,数据预览,Python 题型,二手房
+prev:
+  text: 栏目概览
+  link: /course/python-pandas/
+next:
+  text: 数据清洗
+  link: /course/python-pandas/cleaning
 ---
 
 # 数据预览
 
 本页对应系列题中的 **题 1**,目的是把 `house_module.csv` 读进来,并打印前 10 行,直观感受一份「二手房房源数据」长什么样、字段有哪些、是否存在空值或异常。
+
+## 前置知识
+
+- 已安装 Python 与 pandas(`pip install pandas`)。
+- 掌握 Python 的 `import` 语句与基本函数调用。
+- 把 `house_module.csv` 与本脚本放在同一目录下,或写绝对路径,避免路径错误。
 
 ## 题目描述
 
@@ -63,6 +75,11 @@ df.isnull().sum()  # 每一列的空值数量
 - **路径写错**:`read_csv` 的路径是相对于运行 Python 时的「当前工作目录」,而不是相对于 `.py` 文件本身。建议把代码与 CSV 放在同一目录,或在 `read_csv` 中写绝对路径。
 - **中文乱码**:CSV 通常是 UTF-8 编码,如果出现乱码可加 `encoding='utf-8-sig'`(带 BOM)或 `gbk`。
 - **忘记 `print`**:在 Jupyter / IPython 之外,只写 `df.head(10)` 不会自动打印结果,需要套上 `print`。
+
+## 学完本页之后
+
+- 直接进入 [数据清洗](/course/python-pandas/cleaning),用 pandas 过滤空值与异常值。
+- 也可以先回 [栏目概览](/course/python-pandas/) 查看完整学习路径。
 
 ---
 
