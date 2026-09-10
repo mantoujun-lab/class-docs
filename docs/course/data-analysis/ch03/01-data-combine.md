@@ -13,8 +13,7 @@ keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sq
 - [concat_3.csv](/data/concat_3.csv)
 - [stocks_2016.csv](/data/stocks_2016.csv)
 - [stocks_2017.csv](/data/stocks_2017.csv)
-
-> 注:本节还用到了 SQLite 数据库文件 `chinook.db`,由于 VitePress 静态站点无法正确识别 `.db` 二进制文件的下载链接(会被标记为死链),该文件不再随站提供下载,请从其他渠道获取或自行构造测试库。
+- [chinook.db](/data/chinook.db)
 :::
 
 ## 学习目标
@@ -313,7 +312,6 @@ join函数的参数：
 ```python
 stock_2016 = pd.read_csv('./data/stocks_2016.csv')
 stock_2017 = pd.read_csv('./data/stocks_2017.csv')
-stock_2018 = pd.read_csv('./data/stocks_2018.csv')
 ```
 
 ![chapter03-21](/data-analysis/chapter03-21.webp)
@@ -328,14 +326,6 @@ stock_2016.join(stock_2017, lsuffix='2016', rsuffix='2017', how='outer')
 ```
 
 ![chapter03-22](/data-analysis/chapter03-22.webp)
-
-2）示例：stock_2016 和 stock_2018 按照 Symbol 进行关联
-
-```python
-stock_2016.join(stock_2018.set_index('Symbol'), lsuffix='2016', rsuffix='2018', on='Symbol')
-```
-
-![chapter03-23](/data-analysis/chapter03-23.webp)
 
 ## 总结
 
