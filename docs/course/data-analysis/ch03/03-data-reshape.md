@@ -5,6 +5,15 @@ keywords: pandas,数据整理,melt,pivot,stack,unstack,宽表,长表,堆叠
 ---
 # 数据整理
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [pew.csv](/data/pew.csv)
+- [billboard.csv](/data/billboard.csv)
+- [state_fruit.csv](/data/state_fruit.csv)
+- [movie.csv](/data/movie.csv)
+:::
+
 ## 学习目标
 
 - 掌握melt函数整理数据的方法

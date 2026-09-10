@@ -5,6 +5,18 @@ keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sq
 ---
 # 数据组合
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [concat_1.csv](/data/concat_1.csv)
+- [concat_2.csv](/data/concat_2.csv)
+- [concat_3.csv](/data/concat_3.csv)
+- [stocks_2016.csv](/data/stocks_2016.csv)
+- [stocks_2017.csv](/data/stocks_2017.csv)
+
+> 注:本节还用到了 SQLite 数据库文件 `chinook.db`,由于 VitePress 静态站点无法正确识别 `.db` 二进制文件的下载链接(会被标记为死链),该文件不再随站提供下载,请从其他渠道获取或自行构造测试库。
+:::
+
 ## 学习目标
 
 - 能够使用 concat 拼接组合数据

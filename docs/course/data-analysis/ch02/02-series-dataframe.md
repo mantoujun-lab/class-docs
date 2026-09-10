@@ -5,6 +5,12 @@ keywords: pandas,Series,DataFrame,创建,字典,列表,ndarray,索引
 ---
 # Series 和 DataFrame
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [scientists.csv](/data/scientists.csv)
+:::
+
 ## 学习目标
 
 - 掌握Series的常用属性及方法

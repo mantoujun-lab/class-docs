@@ -5,6 +5,12 @@ keywords: pandas 综合案例,RFM 模型,用户分群,会员价值度,pd.cut 评
 ---
 # RFM 用户分群
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [sales.xlsx](/data/sales.xlsx)
+:::
+
 ## 学习目标
 
 - 知道RFM模型的概念和使用方法

@@ -5,6 +5,12 @@ keywords: pandas 综合案例,Appstore 数据分析,数据清洗,单变量分析
 ---
 # Appstore 数据分析
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [applestore.csv](/data/applestore.csv)
+:::
+
 ## 学习目标
 
 - 掌握描述性数据分析流程
