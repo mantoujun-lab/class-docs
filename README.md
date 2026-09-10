@@ -52,37 +52,31 @@
 
 ### 项目结构
 
-```
+```text
 class-docs/
-├── docs/                      # 文档源码目录
-│   ├── .vitepress/            # VitePress 配置
-│   │   ├── config.mts         # 站点配置文件(含 SEO head 配置)
-│   │   └── theme/             # 自定义主题(蓝橙双主色)
-│   ├── public/                # 静态资源（图片、图标等）
-│   │   ├── favicon.png        # 网站图标
-│   │   ├── funding_wechat.png # 微信赞赏码
-│   │   ├── robots.txt         # 爬虫规则
-│   │   ├── sitemap.xml        # 站点地图
-│   │   ├── rss.xml            # RSS 订阅源
-│   │   └── llms.txt           # LLM 爬虫站点说明
-│   ├── course/                # 课程笔记
-│   │   └── index.md           # 栏目首页
-│   ├── guide/                 # 学习指南
-│   │   ├── index.md           # 栏目首页
-│   │   └── writing.md         # Markdown 写作指南
-│   ├── resources/             # 资源栏目（工具与资讯）
-│   │   ├── index.md           # 栏目首页
-│   │   ├── tools.md           # 实用工具
-│   │   └── news.md            # 行业资讯
-│   ├── class/                 # 班级事务
-│   │   ├── index.md           # 栏目首页
-│   │   └── 7s.md              # 学生宿舍 7S 管理标准
-│   ├── funding.md             # 赞赏页面
-│   └── index.md               # 首页
-├── .github/
-│   └── workflows/
-│       └── pullfrog.yml       # Pullfrog AI Agent 工作流
-├── .gitignore
+├── docs/                        # 文档源码目录
+│   ├── .vitepress/              # VitePress 配置与自定义主题
+│   ├── public/                  # 静态资源
+│   │   ├── data-analysis/       # 数据分析讲义配图(585 张)
+│   │   ├── favicon.png          # 网站图标
+│   │   ├── funding_wechat.png   # 微信赞赏码
+│   │   ├── robots.txt           # 爬虫规则
+│   │   ├── sitemap.xml          # 站点地图
+│   │   ├── rss.xml              # RSS 订阅源
+│   │   └── llms.txt             # LLM 爬虫站点说明
+│   ├── course/                  # 课程笔记
+│   │   ├── python-pandas/       # Python pandas 题型总结
+│   │   └── data-analysis/       # 数据分析讲义(第 1-6 章)
+│   ├── guide/                   # 学习指南
+│   ├── resources/               # 资源栏目(工具与资讯)
+│   ├── class/                   # 班级事务
+│   ├── funding.md               # 赞赏页面
+│   └── index.md                 # 首页
+├── .github/                     # GitHub 配置(CI、Issue 模板、Pullfrog)
+├── .gitattributes               # Git 属性配置
+├── .gitignore                   # Git 忽略规则
+├── .pre-commit-config.yaml      # 提交前钩子配置
+├── AGENTS.md                    # 智能体规则
 ├── LICENSE
 ├── package.json
 ├── pnpm-lock.yaml
