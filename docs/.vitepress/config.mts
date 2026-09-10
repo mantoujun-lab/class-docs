@@ -12,6 +12,10 @@ export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
+  // docs/public/data/ 下的文件路径在 Markdown 中以 /data/<file> 引用,
+  // 但 VitePress 2.0.0-alpha 的 dead link 扫描器无法识别 public 目录内的资源,
+  // 会把 /data/sales.xlsx 等真实存在的文件误报为死链。这里统一忽略 /data/ 前缀的链接。
+  ignoreDeadLinks: [/^\/data\/.*/],
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
     ['meta', { name: 'author', content: 'mantoujun-lab' }],
