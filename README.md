@@ -58,6 +58,7 @@ class-docs/
 │   ├── .vitepress/              # VitePress 配置与自定义主题
 │   ├── public/                  # 静态资源
 │   │   ├── data-analysis/       # 数据分析讲义配图(585 张)
+│   │   ├── data/                # 数据分析课程示例数据集(32 个文件),访问站点的同学可直接下载
 │   │   ├── favicon.png          # 网站图标
 │   │   ├── funding_wechat.png   # 微信赞赏码
 │   │   ├── robots.txt           # 爬虫规则
