@@ -76,7 +76,7 @@ class-docs/
 ├── .gitattributes               # Git 属性配置
 ├── .gitignore                   # Git 忽略规则
 ├── .pre-commit-config.yaml      # 提交前钩子配置
-├── AGENTS.md                    # 项目贡献规则
+├── AGENTS.md                    # 智能体规则
 ├── LICENSE
 ├── package.json
 ├── pnpm-lock.yaml
