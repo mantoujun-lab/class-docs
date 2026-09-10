@@ -5,6 +5,12 @@ keywords: pandas,DataFrame,增加,删除,修改,drop,concat,loc,行,列
 ---
 # DataFrame 增删改
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [scientists.csv](/data/scientists.csv)
+:::
+
 ## 学习目标
 
 - 能够进行 DataFrame 的行操作(添加行/修改行/删除行)

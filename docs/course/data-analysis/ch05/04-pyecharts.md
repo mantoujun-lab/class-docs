@@ -5,6 +5,12 @@ keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状
 ---
 # pyecharts 绘图
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [data_analysis_job.csv](/data/data_analysis_job.csv)
+:::
+
 ## 学习目标
 
 - 能够使用 pyecharts 进行基本绘图操作

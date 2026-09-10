@@ -5,6 +5,13 @@ keywords: pandas,DataFrame,Series,csv,tsv,read_csv,行标签,列标签,loc,iloc
 ---
 # pandas 快速入门
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [tips.csv](/data/tips.csv)
+- [china.tsv](/data/china.tsv)
+:::
+
 ## 学习目标
 
 - 能够知道 DataFrame 和 Series 数据结构

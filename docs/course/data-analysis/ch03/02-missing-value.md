@@ -5,6 +5,14 @@ keywords: pandas,缺失值,None,NaN,NaT,isnull,fillna,dropna,插值,forwardfill
 ---
 # 缺失值处理
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [survey_visited.csv](/data/survey_visited.csv)
+- [titanic_train.csv](/data/titanic_train.csv)
+- [city_day.csv](/data/city_day.csv)
+:::
+
 ## 学习目标
 
 - 知道什么是缺失值,为什么会产生缺失值

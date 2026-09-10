@@ -5,6 +5,12 @@ keywords: apply,applymap,自定义函数,函数向量化,lambda,Series,DataFrame
 ---
 # apply 自定义函数
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [titanic.csv](/data/titanic.csv)
+:::
+
 ## 学习目标
 
 - 掌握 apply 和 applymap 的用法

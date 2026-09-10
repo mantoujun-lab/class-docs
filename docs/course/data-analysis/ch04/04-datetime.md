@@ -5,6 +5,15 @@ keywords: pandas,datetime,Timedelta,DatetimeIndex,date_range,resample,时间序�
 ---
 # datetime 数据类型
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [country_timeseries.csv](/data/country_timeseries.csv)
+- [banklist.csv](/data/banklist.csv)
+- [TSLA.csv](/data/TSLA.csv)
+- [crime.csv](/data/crime.csv)
+:::
+
 ## 学习目标
 
 - 能够使用 pandas 来处理日期时间类型数据

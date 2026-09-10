@@ -5,6 +5,12 @@ keywords: seaborn,数据可视化,直方图,核密度估计,频数图,计数图,
 ---
 # seaborn 绘图
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [fifa.csv](/data/fifa.csv)
+:::
+
 ## 学习目标
 
 - 掌握seaborn的可视化绘图方法
