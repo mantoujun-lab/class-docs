@@ -5,6 +5,12 @@ keywords: pandas,DataFrame,查询,loc,iloc,切片,布尔索引,isin,query
 ---
 # DataFrame 查询
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [scientists.csv](/data/scientists.csv)
+:::
+
 ## 学习目标
 
 - 能够进行 DataFrame 的条件查询操作

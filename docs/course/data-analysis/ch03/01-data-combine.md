@@ -5,6 +5,17 @@ keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sq
 ---
 # 数据组合
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [concat_1.csv](/data/concat_1.csv)
+- [concat_2.csv](/data/concat_2.csv)
+- [concat_3.csv](/data/concat_3.csv)
+- [stocks_2016.csv](/data/stocks_2016.csv)
+- [stocks_2017.csv](/data/stocks_2017.csv)
+- [chinook.db](/data/chinook.db)
+:::
+
 ## 学习目标
 
 - 能够使用 concat 拼接组合数据
@@ -301,7 +312,6 @@ join函数的参数：
 ```python
 stock_2016 = pd.read_csv('./data/stocks_2016.csv')
 stock_2017 = pd.read_csv('./data/stocks_2017.csv')
-stock_2018 = pd.read_csv('./data/stocks_2018.csv')
 ```
 
 ![chapter03-21](/data-analysis/chapter03-21.webp)
@@ -316,14 +326,6 @@ stock_2016.join(stock_2017, lsuffix='2016', rsuffix='2017', how='outer')
 ```
 
 ![chapter03-22](/data-analysis/chapter03-22.webp)
-
-2）示例：stock_2016 和 stock_2018 按照 Symbol 进行关联
-
-```python
-stock_2016.join(stock_2018.set_index('Symbol'), lsuffix='2016', rsuffix='2018', on='Symbol')
-```
-
-![chapter03-23](/data-analysis/chapter03-23.webp)
 
 ## 总结
 

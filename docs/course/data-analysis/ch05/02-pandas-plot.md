@@ -5,6 +5,12 @@ keywords: pandas 绘图,柱状图,折线图,面积图,直方图,饼图,散点图
 ---
 # pandas 绘图
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [winemag-data_first150k.csv](/data/winemag-data_first150k.csv)
+:::
+
 ## 学习目标
 
 - 熟练掌握Pandas数据可视化常用功能

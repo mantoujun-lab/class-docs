@@ -5,6 +5,14 @@ keywords: pandas,groupby,聚合,transform,filter,DataFrameGroupBy,agg,aggregate,
 ---
 # 数据分组操作
 
+::: tip 本节示例数据
+本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+
+- [gapminder.tsv](/data/gapminder.tsv)
+- [tips.csv](/data/tips.csv)
+- [weight_loss.csv](/data/weight_loss.csv)
+:::
+
 ## 学习目标
 
 - 能够在 groupby 分组之后进行聚合操作
