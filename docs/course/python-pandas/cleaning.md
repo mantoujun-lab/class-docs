@@ -14,7 +14,7 @@ next:
 
 本页汇总 **题 2 到题 6**,核心思路都是「按条件筛选行 → 把删除条数写进文件名 → 导出新的 CSV」。整条数据清洗链路如下:
 
-```
+```text
 house_module.csv
   └─ 题2 ─→ cleaned_data_c1_2.csv     (清洗面积)
       └─ 题3 ─→ cleaned_data_c2_480.csv   (清洗价格)

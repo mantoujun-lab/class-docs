@@ -229,7 +229,7 @@ tips.dtypes
 
 ![chapter03-94](/data-analysis/chapter03-94.webp)
 
-2）再把``object/str`类型的`total_bill`列转为`float64/float`类型
+2）再把`object/str`类型的`total_bill`列转为`float64/float`类型
 
 ```python
 tips['total_bill'] = tips['total_bill'].astype(float)

@@ -36,9 +36,9 @@ keywords: pandas,缺失值,None,NaN,NaT,isnull,fillna,dropna,插值,forwardfill
 - NumPy 中缺失值有几种表示形式：NaN,NAN,nan,他们都一样
   ```python
   import numpy as np
-print(np.NaN)
-print(np.NAN)
-print(np.nan)
+  print(np.NaN)
+  print(np.NAN)
+  print(np.nan)
   ```
 
   ![chapter03-24](/data-analysis/chapter03-24.webp)
