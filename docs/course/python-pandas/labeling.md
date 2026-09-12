@@ -19,7 +19,7 @@ prev:
 
 ## 整体流程一览
 
-```
+```text
 house_module2.csv
   ├─ 题7 ──→ price_range_mark.csv          (价格区间)
   ├─ 题8 ──→ area_popularity_mark.csv      (区域热门度)
