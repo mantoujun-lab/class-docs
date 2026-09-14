@@ -252,7 +252,8 @@ export default defineConfig({
           text: '班级事务',
           items: [
             { text: '栏目概览', link: '/class/' },
-            { text: '宿舍 7S 管理', link: '/class/7s' }
+            { text: '宿舍 7S 管理', link: '/class/7s' },
+            { text: '宿舍 7S 原始内容', link: '/class/7s-original' }
           ]
         }
       ],
