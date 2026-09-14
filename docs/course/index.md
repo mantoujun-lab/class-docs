@@ -1,23 +1,23 @@
 ---
 title: 课程笔记
-description: 25 级计算机应用 1 班各学科课程知识点整理,涵盖计算机基础、Office 办公、图像处理、网络基础与编程入门。
-keywords: 课程笔记,计算机应用,学科知识,计算机基础,Office,编程基础,海南省经济技术学校
+description: 25 级计算机应用 1 班各学科课程知识点整理，涵盖计算机基础、Office 办公、图像处理、网络基础与编程入门。
+keywords: 课程笔记，计算机应用，学科知识，计算机基础，Office，编程基础，海南省经济技术学校
 ---
 
 # 课程笔记
 
-本栏目集中收录**计算机应用专业**各学科的课程知识点、课堂笔记与习题解析,帮助同学系统复习与查阅。
+本栏目集中收录**计算机应用专业**各学科的课程知识点、课堂笔记与习题解析，帮助同学系统复习与查阅。
 
 ## 本栏目内容
 
 | 页面 | 内容说明 |
 | --- | --- |
-| [Python pandas 题型总结](/course/python-pandas/) | 围绕二手房数据,使用 pandas 完成数据预览、清洗与打标签等常见操作 |
-| [数据分析讲义](/course/data-analysis/) | 6 章 22 节,从开发环境到 pandas、数据清洗、可视化与综合案例,覆盖数据分析全流程 |
+| [Python pandas 题型总结](/course/python-pandas/) | 围绕二手房数据，使用 pandas 完成数据预览、清洗与打标签等常见操作 |
+| [数据分析讲义](/course/data-analysis/) | 6 章 22 节，从开发环境到 pandas、数据清洗、可视化与综合案例，覆盖数据分析全流程 |
 
 ## 待补充
 
-以下学科尚未成文,欢迎认领并提交:
+以下学科尚未成文，欢迎认领并提交：
 
 | 学科 | 计划收录内容 |
 | --- | --- |
@@ -29,11 +29,11 @@ keywords: 课程笔记,计算机应用,学科知识,计算机基础,Office,编�
 
 ## 如何提交笔记
 
-1. 在 `docs/course/` 下按学科新建 Markdown 文件,例如 `docs/course/fundamentals.md`
+1. 在 `docs/course/` 下按学科新建 Markdown 文件，例如 `docs/course/fundamentals.md`
 2. 按 [Markdown 写作](/guide/writing) 的规范编写内容
 3. 在 `docs/.vitepress/config.mts` 的 `/course/` 侧边栏中登记新页面
 4. 按 [参与共建](/guide/contributing) 的流程提交 Pull Request
 
 ---
 
-> 📌 内容由班级同学共同维护。一篇笔记聚焦一个学科或一个章节,便于检索与复用。
+> 📌 内容由班级同学共同维护。一篇笔记聚焦一个学科或一个章节，便于检索与复用。

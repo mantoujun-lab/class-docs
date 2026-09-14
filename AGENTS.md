@@ -20,6 +20,7 @@ Place new pages in the most relevant content directory. If a page should appear 
 ## Content Guidelines
 
 - Write documentation in clear, consistent Simplified Chinese unless the task explicitly requires another language.
+- Use full-width Chinese punctuation (for example `，`, `。`, `、`, `；`, `：`, `？`, `！`, `（）`, and `「」`) in Chinese prose. Keep half-width punctuation inside fenced code blocks, inline code, URLs, file paths, English text, YAML frontmatter keys, `:::` container markers, and code-style syntax in tables (for example `df.loc[行标签, 列标签]`).
 - Keep heading levels continuous and use descriptive titles.
 - Include a short introduction and practical examples where appropriate.
 - Specify a language for every fenced code block.

@@ -131,12 +131,12 @@ VitePress 项目构建后会生成纯静态资源（输出到 `docs/.vitepress/d
 - **页面级 frontmatter** — 每个 `.md` 页面均可独立声明 `title / description / keywords`
 - **多语言声明** — `lang: 'zh-CN'`、`og:locale: 'zh_CN'`
 - **`sitemap.xml`** — 站点地图，列出了全部可索引页面及其优先级
-- **`robots.txt`** — 爬虫规则,显式允许 Google、Bing、百度以及常见 AI 爬虫(GPTBot、Claude、Perplexity 等)
-- **`rss.xml`** — RSS 订阅源,方便读者与内容聚合平台追踪更新
-- **`llms.txt`** — LLM 站点说明,供 GPTBot、Claude、Perplexity 等 AI 爬虫快速理解站点结构与内容
-- **百度爬虫支持** — 单独的 `baiduspider` meta 标签,提升中文检索收录概率
+- **`robots.txt`** — 爬虫规则，显式允许 Google、Bing、百度以及常见 AI 爬虫（GPTBot、Claude、Perplexity 等）
+- **`rss.xml`** — RSS 订阅源，方便读者与内容聚合平台追踪更新
+- **`llms.txt`** — LLM 站点说明，供 GPTBot、Claude、Perplexity 等 AI 爬虫快速理解站点结构与内容
+- **百度爬虫支持** — 单独的 `baiduspider` meta 标签，提升中文检索收录概率
 
-如需进一步定制(如百度站长平台验证、Google Search Console 验证),可在 `docs/.vitepress/config.mts` 的 `head` 数组中追加对应 `<meta>` 标签。
+如需进一步定制（如百度站长平台验证、Google Search Console 验证），可在 `docs/.vitepress/config.mts` 的 `head` 数组中追加对应 `<meta>` 标签。
 
 ## 🤝 贡献
 
