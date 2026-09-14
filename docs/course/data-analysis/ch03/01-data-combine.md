@@ -1,12 +1,12 @@
 ---
 title: 数据组合
-description: pandas 数据组合讲义,使用 concat、merge、join 完成多个数据集的拼接与关联,涵盖行拼接、列拼接、join 参数设置及 sqlite 数据示例。
-keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sqlite
+description: pandas 数据组合讲义，使用 concat、merge、join 完成多个数据集的拼接与关联，涵盖行拼接、列拼接、join 参数设置及 sqlite 数据示例。
+keywords: pandas，数据组合，concat，merge，join，数据清洗，DataFrame，Series，sqlite
 ---
 # 数据组合
 
 ::: tip 本节示例数据
-本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+本节示例数据请通过下方链接下载，保存到与 Notebook 同目录的 `data/` 文件夹下：
 
 - [concat_1.csv](/data/concat_1.csv)
 - [concat_2.csv](/data/concat_2.csv)
@@ -24,16 +24,16 @@ keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sq
 
 ## 1. 数据组合简介
 
-在动手进行数据分析工作之前,需要进行数据清理工作,数据清理的主要目标是：
+在动手进行数据分析工作之前，需要进行数据清理工作，数据清理的主要目标是：
 
 - 每个观测值成一行
 - 每个变量成一列
 - 每种观测单元构成一张表格
 
-数据整理好之后,可能需要多张表格组合到一起才能进行某些问题的分析
+数据整理好之后，可能需要多张表格组合到一起才能进行某些问题的分析
 
-- 比如：一张表保存公司名称,另一张表保存股票价格
-- 单个数据集也可能会分割成多个,比如时间序列数据,每个日期可能在一个单独的文件中
+- 比如：一张表保存公司名称，另一张表保存股票价格
+- 单个数据集也可能会分割成多个，比如时间序列数据，每个日期可能在一个单独的文件中
 
 ## 2. concat 拼接数据
 
@@ -43,14 +43,14 @@ keywords: pandas,数据组合,concat,merge,join,数据清洗,DataFrame,Series,sq
 
 | 方法 | 说明 |
 | --- | --- |
-| `pd.concat([df1, df2, ..])` | 多个数据集(DataFrame或Series)之间按行标签索引 或列标签索引拼接,默认是outer,可以设置为inner |
+| `pd.concat([df1, df2, ..])` | 多个数据集（DataFrame或Series）之间按行标签索引 或列标签索引拼接，默认是outer，可以设置为inner |
 
 ### 2.2 行拼接：按照列标签索引对齐
 
 **DataFrame和DataFrame 进行拼接**：
 
 ::: tip
-注意：行拼接时,无法对齐的列,默认在拼接后的数据中会填充为 NaN,因为默认拼接是 outter 拼接
+注意：行拼接时，无法对齐的列，默认在拼接后的数据中会填充为 NaN，因为默认拼接是 outter 拼接
 :::
 
 1）加载数据集
@@ -63,7 +63,7 @@ df3 = pd.read_csv('./data/concat_3.csv')
 
 ![chapter03-01](/data-analysis/chapter03-01.webp)
 
-2）将 `df1`、`df2`和 `df3` 按照列标签对齐,进行行拼接
+2）将 `df1`、`df2`和 `df3` 按照列标签对齐，进行行拼接
 
 ```python
 row_concat = pd.concat([df1, df2, df3])
@@ -106,7 +106,7 @@ print(new_series)
 
 ![chapter03-07](/data-analysis/chapter03-07.webp)
 
-2）将 `df1` 和 `new_series` 按照列标签对齐,进行行拼接
+2）将 `df1` 和 `new_series` 按照列标签对齐，进行行拼接
 
 ```python
 pd.concat([df1, new_series])
@@ -117,12 +117,12 @@ pd.concat([df1, new_series])
 ### 2.3 列拼接：按照行标签索引对齐
 
 ::: tip
-注意：列拼接时,无法对齐的行,默认在拼接后的数据中会填充为 NaN,因为默认拼接是 outter 拼接
+注意：列拼接时，无法对齐的行，默认在拼接后的数据中会填充为 NaN，因为默认拼接是 outter 拼接
 :::
 
 **DataFrame和DataFrame 进行拼接**：
 
-1）将 `df1`、`df2`和 `df3` 按照行标签对齐,进行列拼接
+1）将 `df1`、`df2`和 `df3` 按照行标签对齐，进行列拼接
 
 ```python
 pd.concat([df1, df2, df3], axis=1)
@@ -141,7 +141,7 @@ print(new_series)
 
 ![chapter03-07](/data-analysis/chapter03-07.webp)
 
-2）`df1` 和 `new_series` 按照行标签对齐,进行列拼接
+2）`df1` 和 `new_series` 按照行标签对齐，进行列拼接
 
 ```python
 pd.concat([df1, new_series], axis=1)
@@ -153,8 +153,8 @@ pd.concat([df1, new_series], axis=1)
 
 concat 方法的 join参数：
 
-- 默认为 outter：无法对齐的行/列,默认在拼接后的数据中会填充为 NaN,因为默认拼接是 outter 拼接
-- 设置为 inner：只有能够对齐的行/列,才会出现在拼接的结果中
+- 默认为 outter：无法对齐的行/列，默认在拼接后的数据中会填充为 NaN，因为默认拼接是 outter 拼接
+- 设置为 inner：只有能够对齐的行/列，才会出现在拼接的结果中
 
 1）修改 `df1` 和 `df3` 的 columns 列标签
 
@@ -169,7 +169,7 @@ df3.columns = ['A', 'C', 'F', 'H']
 
 ![chapter03-11](/data-analysis/chapter03-11.webp)
 
-2）将 `df1` 和 `df3` 按列标签对齐,进行行拼接,默认 outter
+2）将 `df1` 和 `df3` 按列标签对齐，进行行拼接，默认 outter
 
 ```python
 pd.concat([df1, df3])
@@ -177,7 +177,7 @@ pd.concat([df1, df3])
 
 ![chapter03-12](/data-analysis/chapter03-12.webp)
 
-3）将 `df1` 和 `df3` 按列标签对齐,进行行拼接,设置 `join='inner'`
+3）将 `df1` 和 `df3` 按列标签对齐，进行行拼接，设置 `join='inner'`
 
 ```python
 pd.concat([df1, df3], join='inner')
@@ -189,7 +189,7 @@ pd.concat([df1, df3], join='inner')
 
 ### 3.1 方法简介
 
-> merge 方法类似于 sql 中的 join 语句,用于两个数据集之间按照行标签索引|列标签索引链接,默认是inner,可以设置为：left、right、outer
+> merge 方法类似于 sql 中的 join 语句，用于两个数据集之间按照行标签索引|列标签索引链接，默认是inner，可以设置为：left、right、outer
 
 **基本格式**：
 
@@ -201,19 +201,19 @@ merge函数的参数：
 
 - left：左侧数据集
 - right：右侧数据集
-- how：关联方式,默认为 inner,可以设置为：left、right、outer
-- on='列名'：左侧和有则数据以哪一列进行关联操作,左右两侧列名相同时才指定 on 参数
-- left_on='左侧列名'和 right_on='右侧列名'：左右两侧关联时,列名不同时使用
-- left_index=False：默认为 False,设置为 True,表示左侧的行标签和右侧的数据进行关联
-- right_index=False：默认为 False,设置为 True,表示左侧的数据和右侧的行标签进行关联
+- how：关联方式，默认为 inner，可以设置为：left、right、outer
+- on='列名'：左侧和有则数据以哪一列进行关联操作，左右两侧列名相同时才指定 on 参数
+- left_on='左侧列名'和 right_on='右侧列名'：左右两侧关联时，列名不同时使用
+- left_index=False：默认为 False，设置为 True，表示左侧的行标签和右侧的数据进行关联
+- right_index=False：默认为 False，设置为 True，表示左侧的数据和右侧的行标签进行关联
 
 ### 3.2 merge 示例
 
 #### 3.2.1 从 sqlite 数据库中加载 table 数据
 
-> sqlite是一个微型的、本地的数据库,不必像mysql需要额外启动运行,依靠其特殊的文件,用来存储数据,并提供和数据文件交互的方法；或者称sqlite为本地数据文件系统更为贴切。
+> sqlite是一个微型的、本地的数据库，不必像mysql需要额外启动运行，依靠其特殊的文件，用来存储数据，并提供和数据文件交互的方法；或者称sqlite为本地数据文件系统更为贴切。
 
-这一小节就以 sqlite 数据文件为例,来学习pandas如何合并多个数据集：
+这一小节就以 sqlite 数据文件为例，来学习pandas如何合并多个数据集：
 
 1）从 `chinook.db` 数据库文件中加载 `tracks` 和 `genres` 两张表的数据：
 
@@ -253,7 +253,7 @@ genres.info()
 
 #### 3.2.2 merge 示例：歌曲类型数据和歌曲数据进行 merge
 
-1）将 `genres` 和 `tracks` 数据按照 `GenreId` 进行 merge 操作,设置为 `left` 连接
+1）将 `genres` 和 `tracks` 数据按照 `GenreId` 进行 merge 操作，设置为 `left` 连接
 
 ```python
 tracks_sub = tracks[['TrackId', 'GenreId', 'Milliseconds']]
@@ -287,7 +287,7 @@ pd.to_timedelta(genre_time, unit='ms').dt.floor('s').sort_values(ascending=False
 
 ### 4.1 方法简介
 
-> join 方法类是 merge 方法的一个特殊情况,被调用的数据集按照行标签索引|列标签索引和另一个数据集的行标签索引关联,默认是left,可以设置为：right,inner、outer
+> join 方法类是 merge 方法的一个特殊情况，被调用的数据集按照行标签索引|列标签索引和另一个数据集的行标签索引关联，默认是left，可以设置为：right，inner、outer
 
 **基本格式**：
 
@@ -298,10 +298,10 @@ pd.to_timedelta(genre_time, unit='ms').dt.floor('s').sort_values(ascending=False
 join函数的参数：
 
 - other：右侧数据集
-- how：关联方式,默认为 left,可以设置为：right、inner、outer
-- on='左侧行标签或列标签'： 左侧数据集的行标签名称或列标签名称,on省略时,默认为左侧数据行标签
-- lsuffix：关联后的数据中出现相同列名时,lsuffix指定左侧数据集出现相同列名的后缀
-- rsuffix：关联后的数据中出现相同列名时,rsuffix指定右侧数据集出现相同列名的后缀
+- how：关联方式，默认为 left，可以设置为：right、inner、outer
+- on='左侧行标签或列标签'： 左侧数据集的行标签名称或列标签名称，on省略时，默认为左侧数据行标签
+- lsuffix：关联后的数据中出现相同列名时，lsuffix指定左侧数据集出现相同列名的后缀
+- rsuffix：关联后的数据中出现相同列名时，rsuffix指定右侧数据集出现相同列名的后缀
 
 ### 4.2 join 示例
 
@@ -318,7 +318,7 @@ stock_2017 = pd.read_csv('./data/stocks_2017.csv')
 
 #### 4.2.2 join 示例
 
-1）示例：stock_2016 和 stock_2017 按照行标签进行关联,设置为 outer 连接
+1）示例：stock_2016 和 stock_2017 按照行标签进行关联，设置为 outer 连接
 
 ```python
 # 示例：stock_2016 和 stock_2017 按照行标签进行管理，设置为 outter 连接
@@ -330,10 +330,10 @@ stock_2016.join(stock_2017, lsuffix='2016', rsuffix='2017', how='outer')
 ## 总结
 
 - 能够使用 concat 拼接组合数据
-  - `pd.concat([df1, df2, ..])`：多个数据集(DataFrame或Series)之间按行标签索引或列标签索引拼接,默认是outer,可以设置为inner
+  - `pd.concat([df1, df2, ..])`：多个数据集（DataFrame或Series）之间按行标签索引或列标签索引拼接，默认是outer，可以设置为inner
 
 - 能够使用 merge 关联组合数据
-  - `pd.merge(left, right, …)`：merge 方法类似于 sql 中的 join 语句,用于两个数据集之间按照行标签索引|列标签索引链接,默认是inner,可以设置为：left、right、outer
+  - `pd.merge(left, right, …)`：merge 方法类似于 sql 中的 join 语句，用于两个数据集之间按照行标签索引|列标签索引链接，默认是inner，可以设置为：left、right、outer
 
 - 能够使用 join 关联组合数据
-  - `df.join(other, ...)`：join 方法类是 merge 方法的一个特殊情况,被调用的数据集按照行标签索引|列标签索引和另一个数据集的行标签索引关联,默认是left,可以设置为：right,inner、outer
+  - `df.join(other, ...)`：join 方法类是 merge 方法的一个特殊情况，被调用的数据集按照行标签索引|列标签索引和另一个数据集的行标签索引关联，默认是left，可以设置为：right，inner、outer
