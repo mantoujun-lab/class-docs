@@ -1,12 +1,12 @@
 ---
 title: pyecharts 绘图
-description: 25 级计算机应用 1 班 Python 数据可视化讲义第 5 章第 4 节,介绍 echarts 与 pyecharts 简介,以招聘网站数据分析岗位数据为案例,讲解柱状图、词云图、气泡图、饼状图等交互式图表的绘制方法。
-keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状图,数据清洗,招聘数据分析,海南省经济技术学校
+description: 25 级计算机应用 1 班 Python 数据可视化讲义第 5 章第 4 节，介绍 echarts 与 pyecharts 简介，以招聘网站数据分析岗位数据为案例，讲解柱状图、词云图、气泡图、饼状图等交互式图表的绘制方法。
+keywords: pyecharts，echarts，交互式图表，柱状图，词云图，气泡图，饼状图，数据清洗，招聘数据分析，海南省经济技术学校
 ---
 # pyecharts 绘图
 
 ::: tip 本节示例数据
-本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+本节示例数据请通过下方链接下载，保存到与 Notebook 同目录的 `data/` 文件夹下：
 
 - [data_analysis_job.csv](/data/data_analysis_job.csv)
 :::
@@ -17,11 +17,11 @@ keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状
 
 ## 1. echarts 和 Pyecharts 简介
 
-**echarts 简介**:
+**echarts 简介**：
 
-- echarts 是一个使用 JavaScript 实现的开源可视化库,涵盖各行业图表,满足各种需求
-- echarts 遵循 Apache-2.0 开源协议,免费商用
-- echarts 兼容当前绝大部分浏览器（IE8/9/10/11、Chrome、Firefox、Safari等）及兼容多种设备,可随时随地任性展示
+- echarts 是一个使用 JavaScript 实现的开源可视化库，涵盖各行业图表，满足各种需求
+- echarts 遵循 Apache-2.0 开源协议，免费商用
+- echarts 兼容当前绝大部分浏览器（IE8/9/10/11、Chrome、Firefox、Safari等）及兼容多种设备，可随时随地任性展示
 
 **pyecharts 简介**：
 
@@ -30,9 +30,9 @@ keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状
 
 ## 2. Pyecharts 绘图案例
 
-由于前面的内容基本已经介绍了常用可视化图表和各自的特点,下面通过一个案例来介绍 Pyecharts 的使用：
+由于前面的内容基本已经介绍了常用可视化图表和各自的特点，下面通过一个案例来介绍 Pyecharts 的使用：
 
-> 案例中使用的 pyecharts 版本是 1.6.0,pyecharts 0.X版本和 1.X版本 API 变化较大,不能向下兼容,网上查资料的时候需要注意
+> 案例中使用的 pyecharts 版本是 1.6.0，pyecharts 0.X版本和 1.X版本 API 变化较大，不能向下兼容，网上查资料的时候需要注意
 
 ### 2.1 案例数据说明
 
@@ -40,7 +40,7 @@ keywords: pyecharts,echarts,交互式图表,柱状图,词云图,气泡图,饼状
 >
 > **分析指标**：
 >
-> 哪些公司在招聘数据分析,哪些城市数据分析的需求大,不同城市数据分析的薪资情况,数据分析对工作年限的要求,数据分析对学历的要求
+> 哪些公司在招聘数据分析，哪些城市数据分析的需求大，不同城市数据分析的薪资情况，数据分析对工作年限的要求，数据分析对学历的要求
 
 1）加载数据
 
@@ -97,7 +97,7 @@ c.render_notebook()
 
 ![chapter05-73](/data-analysis/chapter05-73.webp)
 
-> 结果说明：从结果中可以看出,北京上海广州深圳等一线城市,对数据分析的需求最为旺盛
+> 结果说明：从结果中可以看出，北京上海广州深圳等一线城市，对数据分析的需求最为旺盛
 
 ### 2.3 哪些公司在招聘数据分析
 
@@ -136,7 +136,7 @@ wc.render_notebook()
 
 **提取起薪**：
 
-原始数据中大多数薪资都以`6000-18000`形式显示,需要对数据进行处理,提取出起薪,可以使用正则表达式,配合 `apply` 自定义函数,将工作起薪提取出来
+原始数据中大多数薪资都以`6000-18000`形式显示，需要对数据进行处理，提取出起薪，可以使用正则表达式，配合 `apply` 自定义函数，将工作起薪提取出来
 
 1）定义提取工作起薪的函数
 
@@ -154,7 +154,7 @@ def get_salary_down(x):
         return int(x)
 ```
 
-2）提取起薪数据之前,首先处理缺失值,将缺失数据去掉并提取起薪
+2）提取起薪数据之前，首先处理缺失值，将缺失数据去掉并提取起薪
 
 ```python
 # 删除 salary 有缺失值的行
@@ -175,7 +175,7 @@ job['salary_down'].value_counts().sort_index()
 
 ![chapter05-77](/data-analysis/chapter05-77.webp)
 
-从处理的起薪中发现,有一些异常数据：
+从处理的起薪中发现，有一些异常数据：
 
 - 特别低的：小于3000
 - 特别高的：大于80000
@@ -254,7 +254,7 @@ sc.render_notebook()
 
 ![chapter05-82](/data-analysis/chapter05-82.webp)
 
-1）提取要求工作经验数据之前,首先处理缺失值
+1）提取要求工作经验数据之前，首先处理缺失值
 
 ```python
 job.experience.fillna('未知', inplace=True)
@@ -317,7 +317,7 @@ pie.render_notebook()
 
 ## 总结
 
-- echarts 是基于 js 的开源可视化库,pyecharts 是 echarts 的 python 封装,利用 pyecharts 可以绘制具备交互性的炫酷图形
+- echarts 是基于 js 的开源可视化库，pyecharts 是 echarts 的 python 封装，利用 pyecharts 可以绘制具备交互性的炫酷图形
 - pyecharts 1.*版本的绘图 api 还是具有一定规律的
   - Bar()、Pie() .... 创建绘图对象
   - .add()、.add_xaxis()、.add_yaxis()添加数据

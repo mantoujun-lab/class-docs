@@ -1,16 +1,16 @@
 ---
 title: 数据分析讲义
-description: 25 级计算机应用 1 班 Python 数据分析讲义,涵盖 pandas 快速入门、数据清洗、数据处理、数据可视化与综合案例,共 6 章 22 节,适合课堂复习与查阅。
-keywords: 数据分析,Python,pandas,NumPy,Matplotlib,seaborn,pyecharts,数据清洗,数据可视化,RFM,海南省经济技术学校
+description: 25 级计算机应用 1 班 Python 数据分析讲义，涵盖 pandas 快速入门、数据清洗、数据处理、数据可视化与综合案例，共 6 章 22 节，适合课堂复习与查阅。
+keywords: 数据分析，Python，pandas，NumPy，Matplotlib，seaborn，pyecharts，数据清洗，数据可视化，RFM，海南省经济技术学校
 ---
 
 # 数据分析讲义
 
-本栏目收录《Python 数据分析》课程讲义,从开发环境搭建起步,逐步覆盖 pandas 数据结构、数据清洗与处理、可视化绘图,最后落到 Appstore、优衣库销售与 RFM 用户分群三大综合案例,共 **6 章 22 节**。讲义由 GitBook 版本迁移整理,备好示例所需的数据文件后即可复制运行,适合课堂复习与查阅 (๑•̀ㅂ•́)و✧。
+本栏目收录《Python 数据分析》课程讲义，从开发环境搭建起步，逐步覆盖 pandas 数据结构、数据清洗与处理、可视化绘图，最后落到 Appstore、优衣库销售与 RFM 用户分群三大综合案例，共 **6 章 22 节**。讲义由 GitBook 版本迁移整理，备好示例所需的数据文件后即可复制运行，适合课堂复习与查阅 （๑•̀ㅂ•́）و✧。
 
 ## 学习路径
 
-整套讲义按 **「入门 → 清洗 → 处理 → 可视化 → 综合实战」** 五阶段递进,每一阶段建立在前一阶段基础上,建议按顺序学习:
+整套讲义按 **「入门 → 清洗 → 处理 → 可视化 → 综合实战」** 五阶段递进，每一阶段建立在前一阶段基础上，建议按顺序学习：
 
 ```text
 ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
@@ -38,24 +38,24 @@ keywords: 数据分析,Python,pandas,NumPy,Matplotlib,seaborn,pyecharts,数据�
 
 ## 前置知识
 
-在开始本栏目之前,建议已经掌握以下基础,否则部分代码可能看不懂:
+在开始本栏目之前，建议已经掌握以下基础，否则部分代码可能看不懂：
 
-- Python 基本语法:变量、函数、`import` 语句、`for` / `if` 条件分支。
+- Python 基本语法：变量、函数、`import` 语句、`for` / `if` 条件分支。
 - 列表、字典、字符串等基本数据结构。
-- `pip` 安装第三方库的方法,知道 `pip install 包名` 怎么用。
-- 推荐使用 VS Code + Python 扩展,或 Jupyter Notebook,方便分块运行代码。
+- `pip` 安装第三方库的方法，知道 `pip install 包名` 怎么用。
+- 推荐使用 VS Code + Python 扩展，或 Jupyter Notebook，方便分块运行代码。
 
 ::: tip 学习环境小提示
-本栏目命令示例以 Windows PowerShell / Anaconda Prompt 为准,macOS 与 Linux 用户请把 `conda activate` 等命令放在自带终端中执行,路径分隔符也需自行替换。
+本栏目命令示例以 Windows PowerShell / Anaconda Prompt 为准，macOS 与 Linux 用户请把 `conda activate` 等命令放在自带终端中执行，路径分隔符也需自行替换。
 :::
 
 ## 如何补充新内容
 
-1. 在 `docs/course/data-analysis/chXX/` 下按章节新建 Markdown 文件,例如 `docs/course/data-analysis/ch02/06-new-topic.md`
-2. 按 [Markdown 写作](/guide/writing) 的规范编写,代码块务必声明语言
+1. 在 `docs/course/data-analysis/chXX/` 下按章节新建 Markdown 文件，例如 `docs/course/data-analysis/ch02/06-new-topic.md`
+2. 按 [Markdown 写作](/guide/writing) 的规范编写，代码块务必声明语言
 3. 在 `docs/.vitepress/config.mts` 的 `/course/` 侧边栏中登记新页面
 4. 按 [参与共建](/guide/contributing) 的流程提交 Pull Request
 
 ---
 
-> 📌 本栏目讲义整理自 GitBook 版讲义,由班级同学整理迁移到 VitePress 站点。备好示例所需的数据文件后,代码即可直接复制运行,但建议先理解思路再敲代码,避免照搬带来的「学长坑」。
+> 📌 本栏目讲义整理自 GitBook 版讲义，由班级同学整理迁移到 VitePress 站点。备好示例所需的数据文件后，代码即可直接复制运行，但建议先理解思路再敲代码，避免照搬带来的「学长坑」。

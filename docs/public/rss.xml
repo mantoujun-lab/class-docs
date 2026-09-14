@@ -3,13 +3,13 @@
   <channel>
     <title>25计算机1知识库</title>
     <link>https://hjx-25pc1.xyz</link>
-    <description>海南省经济技术学校 25 级计算机应用 1 班官方知识库,系统整理课程笔记、编程示例、学习心得与实用工具。</description>
+    <description>海南省经济技术学校 25 级计算机应用 1 班官方知识库，系统整理课程笔记、编程示例、学习心得与实用工具。</description>
     <language>zh-CN</language>
     <atom:link href="https://hjx-25pc1.xyz/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学生宿舍 7S 管理标准</title>
       <link>https://hjx-25pc1.xyz/class/7s</link>
-      <description>学生宿舍 7S 管理标准与实施细则,涵盖物品摆放、阳台整理、安全节约与卫生要求。</description>
+      <description>学生宿舍 7S 管理标准与实施细则，涵盖物品摆放、阳台整理、安全节约与卫生要求。</description>
       <guid>https://hjx-25pc1.xyz/class/7s</guid>
     </item>
     <item>
@@ -27,19 +27,19 @@
     <item>
       <title>Markdown 写作指南</title>
       <link>https://hjx-25pc1.xyz/guide/writing</link>
-      <description>面向班级同学的 Markdown 写作入门,涵盖标题、列表、代码块与提示容器。</description>
+      <description>面向班级同学的 Markdown 写作入门，涵盖标题、列表、代码块与提示容器。</description>
       <guid>https://hjx-25pc1.xyz/guide/writing</guid>
     </item>
     <item>
       <title>参与共建</title>
       <link>https://hjx-25pc1.xyz/guide/contributing</link>
-      <description>从本地预览到提交 Pull Request 的完整贡献流程,几步就能贡献一页文档。</description>
+      <description>从本地预览到提交 Pull Request 的完整贡献流程，几步就能贡献一页文档。</description>
       <guid>https://hjx-25pc1.xyz/guide/contributing</guid>
     </item>
     <item>
       <title>实用工具</title>
       <link>https://hjx-25pc1.xyz/resources/tools</link>
-      <description>同学们推荐并亲测好用的工具与软件,按用途分类整理。</description>
+      <description>同学们推荐并亲测好用的工具与软件，按用途分类整理。</description>
       <guid>https://hjx-25pc1.xyz/resources/tools</guid>
     </item>
     <item>
@@ -57,7 +57,7 @@
     <item>
       <title>赞赏作者</title>
       <link>https://hjx-25pc1.xyz/funding</link>
-      <description>如果你觉得本站对你有帮助,可以通过微信赞赏码支持作者持续维护与更新。</description>
+      <description>如果你觉得本站对你有帮助，可以通过微信赞赏码支持作者持续维护与更新。</description>
       <guid>https://hjx-25pc1.xyz/funding</guid>
     </item>
   </channel>

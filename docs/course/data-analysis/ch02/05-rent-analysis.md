@@ -1,16 +1,16 @@
 ---
 title: 租房数据分析示例
-description: 本节以链家租房数据集为案例,综合运用 read_csv、loc、iloc、布尔索引、groupby、sort_values 等 pandas 操作,完成数据加载、字段筛选、条件查询与统计汇总,串联前面章节的知识点。
-keywords: pandas,租房数据,数据分析,read_csv,loc,iloc,布尔索引,实战
+description: 本节以链家租房数据集为案例，综合运用 read_csv、loc、iloc、布尔索引、groupby、sort_values 等 pandas 操作，完成数据加载、字段筛选、条件查询与统计汇总，串联前面章节的知识点。
+keywords: pandas，租房数据，数据分析，read_csv，loc，iloc，布尔索引，实战
 ---
 # 租房数据分析示例
 
 ::: tip 本节示例数据
-本节示例数据请通过下方链接下载,保存到与 Notebook 同目录的 `data/` 文件夹下:
+本节示例数据请通过下方链接下载，保存到与 Notebook 同目录的 `data/` 文件夹下：
 
 - [LJdata.csv](/data/LJdata.csv)
 
-> 数据来源:链家网 2017 年 7 月公开挂牌数据,仅作为公开教学样例使用。请勿与近期数据交叉比对,以免衍生住户识别风险。
+> 数据来源：链家网 2017 年 7 月公开挂牌数据，仅作为公开教学样例使用。请勿与近期数据交叉比对，以免衍生住户识别风险。
 :::
 
 ## 学习目标
@@ -58,7 +58,7 @@ house_data.shape
 
 ![chapter02-102](/data-analysis/chapter02-102.webp)
 
-5）查看数据集基本信息：每个字段值的数量、是否非空值,以及该字段的数据类型
+5）查看数据集基本信息：每个字段值的数量、是否非空值，以及该字段的数据类型
 
 ```python
 house_data.info()
@@ -66,7 +66,7 @@ house_data.info()
 
 ![chapter02-101](/data-analysis/chapter02-101.webp)
 
-6）查看数据集中,所有数值型字段的基本统计信息
+6）查看数据集中，所有数值型字段的基本统计信息
 
 ```python
 house_data.describe()
@@ -74,7 +74,7 @@ house_data.describe()
 
 ![chapter02-103](/data-analysis/chapter02-103.webp)
 
-7）查看数据集中,所有非数值型字段的基本统计信息
+7）查看数据集中，所有非数值型字段的基本统计信息
 
 ```python
 import numpy as np
@@ -184,7 +184,7 @@ result.plot.bar(figsize=(20, 8))
 
 ![chapter02-112](/data-analysis/chapter02-112.webp)
 
-6）示例6：查看热门小区(即：看房人数 TOP5 的小区)
+6）示例6：查看热门小区（即：看房人数 TOP5 的小区）
 
 ```python
 result = house_data.groupby('address')['view_num'].sum().sort_values(ascending=False).head()
@@ -211,7 +211,7 @@ house_data[(house_data['district']=='望京租房') & (house_data['price'] <= 20
 
 ![chapter02-114](/data-analysis/chapter02-114.webp)
 
-9）示例9：查看租房价格在2000以下的房屋信息,并按照价格从低到高排序
+9）示例9：查看租房价格在2000以下的房屋信息，并按照价格从低到高排序
 
 ```python
 house_data.query('price <= 2000').sort_values('price')
