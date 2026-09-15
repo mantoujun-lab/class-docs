@@ -275,8 +275,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 MIT 协议开源 · 由 25 级计算机应用 1 班同学共同维护',
-      copyright: `© ${new Date().getFullYear()} mantoujun-lab`
+      message: '基于 MIT 协议',
+      copyright: `© ${new Date().getFullYear()} mantoujun's Lab`
     },
 
     // “编辑此页”链接:点击跳转到 GitHub 上的源文件,方便贡献者直接修改
