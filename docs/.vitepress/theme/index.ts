@@ -21,11 +21,10 @@ export default {
       speedInsights?.setRoute(route)
     }
 
-    reportRoute(router.route.path)
     const previousOnAfterRouteChange = router.onAfterRouteChange
     router.onAfterRouteChange = async (to) => {
       await previousOnAfterRouteChange?.(to)
-      reportRoute(to)
+      reportRoute(router.route.path)
     }
   },
   Layout() {
