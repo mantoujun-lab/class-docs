@@ -57,17 +57,13 @@ class-docs/
 ├── docs/                        # 文档源码目录
 │   ├── .vitepress/              # VitePress 配置与自定义主题
 │   ├── public/                  # 静态资源
-│   │   ├── data-analysis/       # 数据分析讲义配图(584 张)
-│   │   ├── data/                # 数据分析课程示例数据集(32 个文件),访问站点的同学可直接下载
 │   │   ├── favicon.png          # 网站图标
 │   │   ├── funding_wechat.png   # 微信赞赏码
 │   │   ├── robots.txt           # 爬虫规则
 │   │   ├── sitemap.xml          # 站点地图
 │   │   ├── rss.xml              # RSS 订阅源
 │   │   └── llms.txt             # LLM 爬虫站点说明
-│   ├── course/                  # 课程笔记
-│   │   ├── python-pandas/       # Python pandas 题型总结
-│   │   └── data-analysis/       # 数据分析讲义(第 1-6 章)
+│   ├── course/                  # 课程笔记(各学科页面持续补充中)
 │   ├── guide/                   # 学习指南
 │   ├── resources/               # 资源栏目(工具与资讯)
 │   ├── class/                   # 班级事务
