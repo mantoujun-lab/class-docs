@@ -82,4 +82,4 @@ git push -u origin docs/add-course-note
 
 ---
 
-> 📮 流程上有疑问，可在 [GitHub 仓库](https://github.com/mantoujun-lab/class-docs) 提交 Issue 讨论。
+> 📮 流程上有疑问，可在 [GitHub](https://github.com/mantoujun-lab/class-docs/issues) 提交 Issue 讨论。
