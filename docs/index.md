@@ -22,7 +22,7 @@ hero:
       link: /guide/contributing
     - theme: alt
       text: GitHub 仓库
-      link: https://github.com/mantoujun-lab
+      link: https://github.com/mantoujun-lab/class-docs
       target: _blank
 
 features:
