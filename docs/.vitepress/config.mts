@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
 
-const siteUrl = 'https://hjx-25pc1.xyz'
+const siteUrl = 'https://docs.hjx-25pc1.xyz'
 const siteName = '25计算机1知识库'
 const siteDescription =
-  '海南省经济技术学校 25 级计算机应用 1 班官方知识库,系统整理课程笔记、编程示例、学习心得与实用工具,助力同学共同成长进步。'
+  '海南省经济技术学校 25 级计算机应用 1 班官方知识库，系统整理课程笔记、编程示例、学习心得与实用工具，助力同学共同成长进步。'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

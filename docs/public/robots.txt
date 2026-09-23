@@ -17,4 +17,4 @@ User-agent: PerplexityBot
 Allow: /
 
 # 站点地图
-Sitemap: https://hjx-25pc1.xyz/sitemap.xml
+Sitemap: https://docs.hjx-25pc1.xyz/sitemap.xml

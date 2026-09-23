@@ -36,12 +36,10 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/mantoujun-lab/class-docs?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mantoujun-lab/class-docs?style=for-the-badge)
 
-
 ### 技术栈
 
 [![VitePress](https://img.shields.io/badge/VitePress-black?style=for-the-badge&logo=vitepress)](https://vitepress.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white
-)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-24_LTS-black?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mantoujun-lab/class-docs/ci.yml?style=for-the-badge&logo=github)](https://github.com/mantoujun-lab/class-docs/actions/workflows/ci.yml)
 
