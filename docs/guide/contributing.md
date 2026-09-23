@@ -80,6 +80,32 @@ git push -u origin docs/add-course-note
 请勿提交密钥、令牌、个人隐私信息以及 `docs/.vitepress/dist/`、`node_modules/` 等生成目录。
 :::
 
+## 仓库卫生
+
+从工作区删除的文件并不会让仓库变小，它们仍保存在提交历史里。为了让仓库保持轻量，日常提交时请注意：
+
+1. 不要提交大型数据集（CSV、XLSX、数据库文件等）与音视频，示例数据请存放在网盘并在笔记中给出链接
+2. 图片先压缩再放入 `docs/public/`，单张尽量控制在 500KB 以内
+3. 提交前用 `git status` 确认没有把生成目录或临时文件带进暂存区
+
+如果仓库因为历史大文件膨胀而做过一次历史重写，还要记得清理这些「看不见」的残留：
+
+```powershell
+# 检查本地是否留有历史重写的备份引用
+git for-each-ref refs/original
+
+# 删除备份引用（如有）
+git update-ref -d refs/original/refs/heads/main
+
+# 删除指向旧历史的标签，避免旧对象继续被引用
+git push origin :refs/tags/v1.0.0
+```
+
+两点额外提醒：
+
+- 已关闭 PR 的 `refs/pull/*` 引用由 GitHub 托管，无法自行删除，如需彻底清理要联系 [GitHub Support](https://support.github.com/)
+- 清理之后仓库体积徽章不会立即变化，需等待 GitHub 服务端完成垃圾回收
+
 ---
 
 > 📮 流程上有疑问，可在 [GitHub](https://github.com/mantoujun-lab/class-docs/issues) 提交 Issue 讨论。
