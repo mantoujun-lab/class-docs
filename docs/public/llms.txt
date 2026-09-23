@@ -25,7 +25,8 @@
 - `/resources/tools` — 实用工具与软件推荐
 - `/resources/news` — 行业资讯与技术前沿
 - `/class/` — 班级事务栏目概览（制度与规范）
-- `/class/7s` — 学生宿舍 7S 管理标准
+- `/class/7s` — 学生宿舍 7S 管理标准（修订版）
+- `/class/7s-original` — 学生宿舍 7S 管理标准（原始文件存档）
 - `/funding` — 赞赏作者
 
 ## 使用条款
