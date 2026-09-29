@@ -21,14 +21,17 @@ export default defineConfig({
     ['meta', { name: 'format-detection', content: 'telephone=no' }],
 
     // Open Graph (页面级 title/description/url 由 transformPageData 注入)
+    // og-image.png 为 1200×630 专用分享图,满足社交平台大图卡片尺寸要求
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: siteName }],
-    ['meta', { property: 'og:image', content: `${siteUrl}/favicon.png` }],
+    ['meta', { property: 'og:image', content: `${siteUrl}/og-image.png` }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
 
     // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:image', content: `${siteUrl}/favicon.png` }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: `${siteUrl}/og-image.png` }],
 
     // Icons / manifest
     ['link', { rel: 'icon', href: '/favicon.png' }],

@@ -49,6 +49,7 @@ pnpm docs:build
 2. 补全 frontmatter 的 `title`、`description`、`keywords` 三个字段
 3. 按 [Markdown 写作](/guide/writing) 的规范编写正文
 4. 在 `docs/.vitepress/config.mts` 的对应侧边栏分组中登记新页面
+5. 如需被搜索与聚合工具收录，同步更新 `docs/public/` 下的 `sitemap.xml`、`rss.xml` 与 `llms.txt`（这三个文件为手工维护，删除或重命名页面时同样需要同步清理）
 
 frontmatter 示例：
 
