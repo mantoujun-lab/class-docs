@@ -14,6 +14,7 @@ This repository is a Chinese static documentation site built with **VitePress 2*
 - `docs/funding.md`: sponsorship page
 - `docs/public/`: static assets copied to the site root
 - `docs/.vitepress/config.mts`: VitePress configuration, navigation, sidebar, and SEO settings
+- `docs/.vitepress/data/`: build-time data loaders, for example the homepage recent-updates list and site statistics (`updates.data.ts`); watch patterns are resolved relative to the data file itself
 
 Place new pages in the most relevant content directory. If a page should appear in the site menu, update the navigation or sidebar in `docs/.vitepress/config.mts`. Use lowercase English letters, numbers, and hyphens for page paths; avoid spaces.
 
