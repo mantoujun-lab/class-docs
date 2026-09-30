@@ -89,7 +89,7 @@ import { data } from './.vitepress/data/updates.data'
 <ul class="home-updates">
   <li v-for="item in data.updates" :key="item.url">
     <a :href="item.url">{{ item.title }}</a>
-    <time class="home-updates-date">{{ item.date }}</time>
+    <time class="home-updates-date" :datetime="item.date">{{ item.date }}</time>
   </li>
 </ul>
 

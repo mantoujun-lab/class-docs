@@ -29,10 +29,18 @@ export { data }
 // 最近更新列表展示的条数
 const RECENT_COUNT = 5
 
+// 固定按东八区输出日期,避免构建机时区不同(本地 UTC+8、CI 为 UTC)导致日期相差一天
+const DATE_FORMAT = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+})
+
 function formatDate(ts: number): string {
-  const d = new Date(ts)
-  const pad = (n: number) => String(n).padStart(2, '0')
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+  const parts = DATE_FORMAT.formatToParts(new Date(ts))
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? ''
+  return `${get('year')}-${get('month')}-${get('day')}`
 }
 
 // 依次取 frontmatter 的 title、Markdown 一级标题,都没有则退化为文件名
@@ -107,14 +115,16 @@ export default defineLoader({
 
     items.sort((a, b) => b.timestamp - a.timestamp)
 
+    // 首页不计入"最近更新":列表与统计都只看内容页,口径保持一致
+    const contentItems = items.filter((item) => item.url !== '/')
+
     return {
       stats: {
         pageCount: files.length,
         sectionCount: sections.size,
-        lastUpdated: items.length ? items[0].date : '-'
+        lastUpdated: contentItems.length ? contentItems[0].date : '-'
       },
-      // 首页本身不出现在"最近更新"列表里
-      updates: items.filter((item) => item.url !== '/').slice(0, RECENT_COUNT)
+      updates: contentItems.slice(0, RECENT_COUNT)
     }
   }
 })
