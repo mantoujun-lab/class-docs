@@ -49,7 +49,8 @@ function extractTitle(file: string): string {
   const fm = src.match(/^---\r?\n([\s\S]*?)\r?\n---/)
   const fmTitle = fm?.[1].match(/^title:\s*(.+?)\s*$/m)?.[1]
   if (fmTitle) return fmTitle.replace(/^['"]|['"]$/g, '')
-  const heading = src.match(/^#\s+(.+?)\s*$/m)?.[1]
+  const firstFence = src.indexOf('\n```')
+  const heading = src.slice(0, firstFence === -1 ? undefined : firstFence).match(/^#\s+(.+?)\s*$/m)?.[1]
   return heading || basename(file, '.md')
 }
 
