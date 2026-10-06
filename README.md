@@ -1,6 +1,6 @@
 <div align="center">
 
-![class-docs](https://socialify.git.ci/mantoujun-lab/class-docs/image?custom_description=%E6%B5%B7%E5%8D%97%E7%9C%81%E7%BB%8F%E6%B5%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E6%A0%A1+%C2%B7+25+%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8+1+%E7%8F%AD+%C2%B7+%E7%9F%A5%E8%AF%86%E7%82%B9%E6%96%87%E6%A1%A3%E5%BA%93&description=1&forks=1&issues=1&language=1&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiM0YTZjZjciIGQ9Ik0xMiAydjRxMCAxLjI1Ljg3NSAyLjEyNVQxNSA5aDR2MTFxMCAuODI1LS41ODcgMS40MTNUMTcgMjJIN3EtLjgyNSAwLTEuNDEyLS41ODdUNSAyMFY0cTAtLjgyNS41ODgtMS40MTJUNyAyem0yIDBsNSA1aC00cS0uNDI1IDAtLjcxMi0uMjg4VDE0IDZ6bS00IDE3aDJxLjQyNSAwIC43MTMtLjI4OFQxMyAxOHQtLjI4OC0uNzEyVDEyIDE3aC0ycS0uNDI1IDAtLjcxMi4yODhUOSAxOHQuMjg4LjcxM1QxMCAxOW0wLTRoNHEuNDI1IDAgLjcxMy0uMjg4VDE1IDE0dC0uMjg4LS43MTJUMTQgMTNoLTRxLS40MjUgMC0uNzEyLjI4OFQ5IDE0dC4yODguNzEzVDEwIDE1IiAvPgo8L3N2Zz4K&name=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto)
+![class-docs](https://socialify.git.ci/mantoujun-lab/class-docs/image?custom_description=25+%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8+1+%E7%8F%AD+%C2%B7+%E7%9F%A5%E8%AF%86%E7%82%B9%E6%96%87%E6%A1%A3%E5%BA%93&description=1&forks=1&issues=1&language=1&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiM0YTZjZjciIGQ9Ik0xMiAydjRxMCAxLjI1Ljg3NSAyLjEyNVQxNSA5aDR2MTFxMCAuODI1LS41ODcgMS40MTNUMTcgMjJIN3EtLjgyNSAwLTEuNDEyLS41ODdUNSAyMFY0cTAtLjgyNS41ODgtMS40MTJUNyAyem0yIDBsNSA1aC00cS0uNDI1IDAtLjcxMi0uMjg4VDE0IDZ6bS00IDE3aDJxLjQyNSAwIC43MTMtLjI4OFQxMyAxOHQtLjI4OC0uNzEyVDEyIDE3aC0ycS0uNDI1IDAtLjcxMi4yODhUOSAxOHQuMjg4LjcxM1QxMCAxOW0wLTRoNHEuNDI1IDAgLjcxMy0uMjg4VDE1IDE0dC0uMjg4LS43MTJUMTQgMTNoLTRxLS40MjUgMC0uNzEyLjI4OFQ5IDE0dC4yODguNzEzVDEwIDE1IiAvPgo8L3N2Zz4K&name=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto)
 
 [访问文档站](https://docs.hjx-25pc1.xyz) · [GitHub 组织](https://github.com/mantoujun-lab)
 
@@ -10,7 +10,7 @@
 
 ### 关于我们
 
-本仓库是 **海南省经济技术学校** 25 级计算机应用 1 班的知识点文档库，由班级同学自发创建与维护。我们致力于将课堂所学、课外拓展、学习心得等内容系统化地整理下来，形成一个可长期查阅、持续更新的知识沉淀平台。
+本仓库是 25 级计算机应用 1 班的知识点文档库，由班级同学自发创建与维护。我们致力于将课堂所学、课外拓展、学习心得等内容系统化地整理下来，形成一个可长期查阅、持续更新的知识沉淀平台。
 
 ### 项目原理
 

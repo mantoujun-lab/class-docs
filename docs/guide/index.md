@@ -1,7 +1,7 @@
 ---
 title: 学习指南
 description: 25 级计算机应用 1 班学习指南，包含 Markdown 写作规范、备考攻略、学习心得与文档协作流程。
-keywords: 学习指南，Markdown 写作，备考攻略，学习心得，文档协作，海南省经济技术学校
+keywords: 学习指南，Markdown 写作，备考攻略，学习心得，文档协作
 ---
 
 # 学习指南
